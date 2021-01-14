@@ -23,7 +23,6 @@ autocmd BufWinEnter *.* silent loadview
 
 
 "set softtabstop=0
-"highlight Nontext ctermfg=darkgrey
 "highlight Special ctermfg=darkgrey
 "set nohlsearch
 "set nuw=6

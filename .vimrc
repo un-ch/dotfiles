@@ -5,11 +5,16 @@ nmap <leader>t :bel ter<cr><c-W><c-W>:resize +20<cr><c-W><c-W>
 "space characters whenever the tab key is pressed:
 "set expandtab
 
-"controling the number of space characters:
-"set tabstop=2
+set noexpandtab
+
+"controling the number of 'space' characters while tab key pressed:
+set tabstop=4
 
 "automatic indentation:
-"set shiftwidth=2
+"set shiftwidth=4
+
+set list
+set listchars=tab:>-
 
 hi LineNr NONE
 hi CursorLineNr NONE

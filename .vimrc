@@ -1,9 +1,16 @@
 syntax off
 set number relativenumber
 nmap <leader>t :bel ter<cr><c-W><c-W>:resize +20<cr><c-W><c-W>
-set tabstop=2
-set shiftwidth=2
-set expandtab
+
+"space characters whenever the tab key is pressed:
+"set expandtab
+
+"controling the number of space characters:
+"set tabstop=2
+
+"automatic indentation:
+"set shiftwidth=2
+
 hi LineNr NONE
 hi CursorLineNr NONE
 hi Folded NONE
@@ -11,16 +18,11 @@ hi Folded NONE
 "hi Folded ctermfg=green
 "hi Folded ctermbg=darkgrey
 
-
-"###############################
-"# lines to save text folding: #
-"###############################
+"############################
+"# saving the text folding: #
+"############################
 autocmd BufWinLeave *.* mkview
 autocmd BufWinEnter *.* silent loadview 
-
-
-
-
 
 "set softtabstop=0
 "highlight Special ctermfg=darkgrey

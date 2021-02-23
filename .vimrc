@@ -2,19 +2,27 @@ syntax off
 set number relativenumber
 nmap <leader>t :bel ter<cr><c-W><c-W>:resize +20<cr><c-W><c-W>
 
+set foldmethod=manual
+set foldnestmax=10
+set nofoldenable
+set foldlevel=2
+
+set autoindent
+"set cindent
+
 "space characters whenever the tab key is pressed:
 "set expandtab
 
-set noexpandtab
+"set noexpandtab
 
 "controling the number of 'space' characters while tab key pressed:
 set tabstop=4
 
-"automatic indentation:
-"set shiftwidth=4
+"indentation several lines at once:
+set shiftwidth=4
 
-set list
-set listchars=tab:>-
+"set list
+"set listchars=tab:>-
 
 hi LineNr NONE
 hi CursorLineNr NONE
@@ -26,8 +34,8 @@ hi Folded NONE
 "############################
 "# saving the text folding: #
 "############################
-autocmd BufWinLeave *.* mkview
-autocmd BufWinEnter *.* silent loadview 
+"autocmd BufWinLeave *.* mkview
+"autocmd BufWinEnter *.* silent loadview 
 
 "set softtabstop=0
 "highlight Special ctermfg=darkgrey

@@ -1,17 +1,13 @@
 [Configuration]
-"darkgray color:
-ColorForeground=#555557575353
-
-"darkgreen color:
-"ColorForeground=#00004bf21543
-
+"ColorForeground=#205F00
+ColorForeground=#585858
 MiscAlwaysShowTabs=FALSE
 MiscBell=FALSE
 MiscBellUrgent=FALSE
 MiscBordersDefault=FALSE
 MiscCursorBlinks=FALSE
 MiscCursorShape=TERMINAL_CURSOR_SHAPE_BLOCK
-MiscDefaultGeometry=107x14
+MiscDefaultGeometry=98x14
 MiscInheritGeometry=FALSE
 MiscMenubarDefault=FALSE
 MiscMouseAutohide=TRUE
@@ -36,5 +32,5 @@ MiscNewTabAdjacent=FALSE
 ColorBackground=#000000000000
 FontAllowBold=FALSE
 ColorBoldIsBright=FALSE
-FontName=Noto Mono Bold 11
+FontName=Noto Mono Bold 12
 CellHeightScale=1.050000

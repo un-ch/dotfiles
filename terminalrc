@@ -1,6 +1,17 @@
 [Configuration]
+
+"grey font color:
+"ColorForeground=#696969
+
+"dark grey font color:
+"ColorForeground=#585858
+
+"dark-dark grey font color:
+ColorForeground=#404040
+
+"green font color:
 "ColorForeground=#205F00
-ColorForeground=#585858
+
 MiscAlwaysShowTabs=FALSE
 MiscBell=FALSE
 MiscBellUrgent=FALSE

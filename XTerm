@@ -1,0 +1,25 @@
+!XTerm*font: -adobe-courier-medium-r-normal*14-140-75-75-m-90*
+!XTerm*font: -adobe-courier-medium-r-normal*
+!XTerm*foreground: darkgreen
+xterm*faceName: Monospace
+
+xterm*faceSize: 13
+
+xterm*VT100*geometry: 98x28
+xterm*font: -misc-fixed-medium-r-normal--20-200-75-75-c-100-iso8859-1
+xterm*background: black
+xterm*foreground: darkgreen
+xterm*loginShell: false
+xterm*scrollBar: false
+xterm*rightScrollBar: false
+xterm*title: XTerm
+xterm*iconName: XTerm
+xterm*saveLines: 50000
+
+
+xterm*TitleBar: off
+!Xterm*AllowIconInput: on
+!Xterm*termtype: vt100
+!Xterm*Title: off
+!Xterm*none: on
+!Xterm*clientDecoration: none

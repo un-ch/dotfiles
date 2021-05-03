@@ -1,6 +1,6 @@
 syntax off
 set number relativenumber
-nmap <leader>t :bel ter<cr><c-W><c-W>:resize +20<cr><c-W><c-W>
+nmap <leader>t :bel ter<cr><c-W><c-W>:resize +15<cr><c-W><c-W>
 
 set foldmethod=manual
 set foldnestmax=10
@@ -27,6 +27,7 @@ set shiftwidth=4
 hi LineNr NONE
 hi CursorLineNr NONE
 hi Folded NONE
+hi Search NONE
 
 "hi Folded ctermfg=green
 "hi Folded ctermbg=darkgrey

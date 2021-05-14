@@ -1,16 +1,32 @@
-xterm*faceName: DejaVu Sans Mono 
-!xterm*faceName: Monospace 
-xterm*faceSize: 12
+xterm*faceName: Monospace
+xterm*faceSize: 11
 
-!xterm*geometry: 90x20
-xterm*geometry: fullscreen
+!xterm*geometry: 95x20
+xterm*internalBorder: 5
+xterm*borderWidth: 5
+xterm*colorInnerBorder: true
+xterm*activeIcon: true
+
 xterm*background: black
 
-!!!dark gray foreground:
+!!!!!!!!!!!!!!!!!!!!!!
+!dark-dark grey color:
+!!!!!!!!!!!!!!!!!!!!!!
 xterm*foreground: rgb:40/40/40
 
-!xterm*foreground: gray
+!xterm*foreground: darkgreen
 
-!xterm*foreground: green
+!xterm*borderWidth: 10
+!xterm*VT100*iconBorderColor: black
+!xterm*loginShell: false
+!xterm*scrollBar: false
+!xterm*rightScrollBar: false
+!xterm*title: xterm
+!xterm*iconName: xterm
+!xterm*saveLines: 50000
 
-xterm*TitleBar: off
+!xterm*VT100*titleBar: off
+!Xterm*AllowIconInput: on
+!xterm*termtype: vt100
+!Xterm*Title: off
+!Xterm*none: on

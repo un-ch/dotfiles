@@ -177,5 +177,12 @@ mv cyrillic_named_file $(echo cyrillic_named_file | sed -e $(cat renaming_rule_f
 cat renaming_rule_file:
 	's/ФФФ/fff/g'
 
-#mounting on freebsd: 
+#rotate the display:
+xrandr -o left
+
+#grep with ignore case:
+grep -i foo_pattern foo_file;
+grep -y foo_pattern foo_file;
+
+#mounting on freebsd:
 mount -v -t msdosfs /dev/da0s1 /mnt/usb/

@@ -2,6 +2,12 @@ syntax off
 set number relativenumber
 nmap <leader>t :bel ter<cr><c-W><c-W>:resize +15<cr><c-W><c-W>
 
+set noincsearch
+set smartcase
+set ignorecase
+
+set nowrapscan
+
 set foldmethod=manual
 set foldnestmax=10
 set nofoldenable
@@ -24,6 +30,8 @@ set shiftwidth=4
 "set list
 "set listchars=tab:>-
 
+"hi Error NONE
+hi ErrorMsg NONE
 hi LineNr NONE
 hi CursorLineNr NONE
 hi Folded NONE

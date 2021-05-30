@@ -9,4 +9,3 @@ xterm*foreground: gray
 
 !dark gray foreground:
 !xterm*foreground: rgb:40/40/40
-

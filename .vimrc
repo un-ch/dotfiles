@@ -8,6 +8,12 @@ set smartcase
 
 set nowrapscan
 
+set noincsearch
+set smartcase
+set ignorecase
+
+set nowrapscan
+
 set foldmethod=manual
 set foldnestmax=10
 set nofoldenable

@@ -1,16 +1,12 @@
-xterm*faceName: DejaVu Sans Mono 
-!xterm*faceName: Monospace 
-xterm*faceSize: 12
+xterm*faceName: Monospace
+xterm*faceSize: 11
 
-!xterm*geometry: 90x20
-xterm*geometry: fullscreen
+xterm*geometry: 80x30
 xterm*background: black
-
-!!!dark gray foreground:
-xterm*foreground: rgb:40/40/40
-
-!xterm*foreground: gray
-
+xterm*foreground: gray
+!xterm*foreground: white
 !xterm*foreground: green
 
-xterm*TitleBar: off
+!dark gray foreground:
+!xterm*foreground: rgb:40/40/40
+

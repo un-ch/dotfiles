@@ -6,7 +6,7 @@ sed -i '/pattern/a\ \tnew_string' todo_list.txt
 sed -i '/pattern/a\    foo' todo_list.txt
 
 #delete lines starting from the 2 till the 5
-sed -i '2,5d' foo_file
+sed '2,5d' foo_file
 
 #replacing through the line number:
 sed -i '307s/search_pattern/replace_pattern/' todo_list.txt
@@ -179,3 +179,12 @@ cat renaming_rule_file:
 
 #mounting on freebsd: 
 mount -v -t msdosfs /dev/da0s1 /mnt/usb/
+
+#vim: delete symbols from cursor to the end of line
+D (Shift + d)
+
+#
+adjkerntz -i
+
+#
+ntpdate -v -b in.pool.ntp.org

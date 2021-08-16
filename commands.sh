@@ -6,7 +6,7 @@ sed -i '/pattern/a\ \tnew_string' todo_list.txt
 sed -i '/pattern/a\    foo' todo_list.txt
 
 #delete lines starting from the 2 till the 5
-sed '2,5d' foo_file
+sed -i '2,5d' foo_file
 
 #replacing through the line number:
 sed -i '307s/search_pattern/replace_pattern/' todo_list.txt
@@ -93,16 +93,20 @@ vim ~/.config/xfce4/terminal/terminalrc
 #restore previous vim folding 
 :loadview
 
-#browsing from *.txt file (works not correct):
+#browsing from *.txt file:
+#(works not correct):
 xargs -n1 firefox -private-window < foo_file.txt
 
-#browsing from *.txt file (works not correct):
+#browsing from *.txt file
+#(works not correct):
 xargs -a foo_file.txt firefox -private-window "$line"
 
-#browsing from *.txt file (works not correct):
+#browsing from *.txt file
+#(works not correct):
 xargs -a foo_file.txt firefox -private-window
 
-#browsing urls from the file (works not correct):
+#browsing urls from the file
+#(works not correct):
 #!/bin/bash
 I=2;
 while [ $I -le 3 ]; do
@@ -135,6 +139,9 @@ realpath foo_file
 #vim: delete all lines in the file:
 :%d
 
+#vim: delete all characters in the line after the cursor:
+:D
+
 #vim: delete all lines in the file after the cursor:
 :dG
 
@@ -155,7 +162,7 @@ ls -F --g
 #-n flag is for the line numbers:
 grep -nF '[!]' foo_file
 
-#extracting the archive:
+
 tar -xf palemoon-29.1.0.linux-x86_64-gtk2.tar.xz
 
 #list of sleeping processes:
@@ -178,20 +185,38 @@ cat renaming_rule_file:
 	's/ФФФ/fff/g'
 
 #rotate the display:
-xrandr -o left
+xrandr --output DP1 --rotate left
 
 #grep with ignore case:
 grep -i foo_pattern foo_file;
 grep -y foo_pattern foo_file;
 
-#mounting on freebsd:
-mount -v -t msdosfs /dev/da0s1 /mnt/usb/
+#vim: replacing on concrete lines:
+:250,+19s/search_pattern/new_pattern/g
 
-#vim: delete symbols from cursor to the end of line
-D (Shift + d)
+#grepping through the dictionary file and show first line of matching result:
+grep <word> *.dict_file| head -n 1
+wget -qO- 'https://en.wikipedia.org/wiki/Comparison_of_X_window_managers' \
+	| grep \<title\>
 
-#
-adjkerntz -i
+setxkbmap us
+setxkbmap ru
 
-#
-ntpdate -v -b in.pool.ntp.org
+#change the volume:
+amixer sset 'Master' 50%
+
+redshift -l 50.45:30.52 & exit
+
+vim: undolist
+
+#suspend the devuan os:
+dbus-send --system --print-reply --dest=org.freedesktop.UPower \
+	/org/freedesktop/UPower org.freedesktop.UPower.Suspend
+
+#execute one command through its line number from script file:
+#'160' - number of the line
+$(sed -n 160p command_script.sh)
+#vim: display several lines after eof
+<zz>
+#printing variable from the Makefile
+$(info VAR="$(VAR_VALUE)")

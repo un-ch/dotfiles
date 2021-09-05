@@ -114,9 +114,9 @@ while [ $I -le 3 ]; do
 	I=$(( I+1 ))
 done
 
-#browsing urls from the file:
+#browsing urls from the data_file:
 while read line; do
-	firefox -private-window "$line"
+	firefox -private-window "$line" &
 	sleep 1
 done < /home/us/data_file.txt
 
@@ -216,7 +216,17 @@ dbus-send --system --print-reply --dest=org.freedesktop.UPower \
 #execute one command through its line number from script file:
 #'160' - number of the line
 $(sed -n 160p command_script.sh)
+
 #vim: display several lines after eof
 <zz>
-#printing variable from the Makefile
+
+#printing variable from the Makefile:
 $(info VAR="$(VAR_VALUE)")
+
+#running wicd_network_manager:
+wicd-client
+
+xterm: paste to the file from buffer
+<ctrl + insert>
+
+git push origin --delete not_needed_branch

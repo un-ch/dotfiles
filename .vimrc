@@ -1,13 +1,12 @@
 syntax off
 set number relativenumber
-nmap <leader>t :bel ter<cr><c-W><c-W>:resize +5<cr><c-W><c-W>
 
-set noincsearch
-set ignorecase
-set smartcase
+nmap <leader>t :bel ter<cr><c-W><c-W>:resize +15<cr><c-W><c-W>
 
-set nowrapscan
+"automatic closing branckets:
+"inoremap {<CR> {<CR>}<C-o>0
 
+set hidden "move to another buffer without saving the current file 
 set noincsearch
 set smartcase
 set ignorecase

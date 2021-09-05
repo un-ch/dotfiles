@@ -1,11 +1,15 @@
 xterm*faceName: Monospace
-xterm*faceSize: 11
-
-xterm*geometry: 80x30
+xterm*faceSize: 15
 xterm*background: black
-xterm*foreground: gray
-!xterm*foreground: white
-!xterm*foreground: green
 
-!dark gray foreground:
-!xterm*foreground: rgb:40/40/40
+!!!!!!!!!!!!!!!!!!!!!!
+!dark-dark grey color:
+!!!!!!!!!!!!!!!!!!!!!!
+xterm*foreground: rgb:40/40/40
+
+!xterm*foreground: darkgreen
+!xterm*selectToClipboard: true
+
+XTerm*VT100.Translations:       #override\n\
+ Shift Ctrl <KeyPress> v: insert-selection(CLIPBOARD)\n\
+ Shift Ctrl <KeyPress> c: copy-selection(CLIPBOARD)\n

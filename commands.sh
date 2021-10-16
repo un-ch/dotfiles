@@ -64,6 +64,10 @@ Ctrl-^;
 #vim repalce character under the cursor:
 <s>;
 
+#vim: searching for the whole word:
+* (search forwards);
+# (search backwards);
+
 #examples with find tool:
 find . -name '*.flac' -o -name '*mp3' >> playlist
 
@@ -77,6 +81,11 @@ vim ~/.config/xfce4/terminal/terminalrc
 
 #replace spaces with tabs:
 :1,$s/  /\t/g
+
+#add symbol before the lines:
+:5,10s/^/#/
+#uncomment lines:
+:5,10s/^#//
 
 #opening the browser of catalogues from the left side:
 :Vexplore!
@@ -171,6 +180,10 @@ jobs
 #xterm fullscreen:
 <alt+enter>
 
+#xterm: enable recognition of ansi color-change escape seq.;
+#it sets the colorMode resource to "false":
+xterm -cm
+
 #disabled beep sound on dell inspiron (freebsd os):
 echo "sysctl kern.vt.enable_bell=0" >> /etc/sysctl.conf
 
@@ -230,3 +243,12 @@ xterm: paste to the file from buffer
 <ctrl + insert>
 
 git push origin --delete not_needed_branch
+
+#test file speed ?
+time ./a.out
+
+#execute grep results
+grep time ~/commands.sh | bash
+
+#run gcc from vim:
+!gcc %

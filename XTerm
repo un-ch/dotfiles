@@ -1,7 +1,15 @@
-xterm*faceName: Monospace
-xterm*faceSize: 15
+!xterm*faceName: Monospace
+xterm*faceName: Notosansmono
+!xterm*faceName: Freemonooboldoblique
+!xterm*faceName: Liberationmono
+xterm*faceSize: 16
 xterm*background: black
+xterm*cursorBlink: true
+xterm*colorMode: false
+xterm*cursorUnderLine: true
+!xterm*cursorColor (-cr grey)
 
+xterm*VT100*geometry:80x15
 !!!!!!!!!!!!!!!!!!!!!!
 !dark-dark grey color:
 !!!!!!!!!!!!!!!!!!!!!!

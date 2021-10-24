@@ -12,17 +12,19 @@ BUILD_DIR=build
 INCLUDE_DIR=include
 SRC_DIR=src
 
+# generating directories:
 mkdir	$PROJECT_DIR \
 		$PROJECT_DIR/$BUILD_DIR \
 		$PROJECT_DIR/$INCLUDE_DIR \
 		$PROJECT_DIR/$SRC_DIR
 
+# generating the Makefile:
 touch $PROJECT_DIR/Makefile
 
 cat > $PROJECT_DIR/Makefile << EOF
 
 CC			=	gcc
-CFLAGS 		=	-Wall -g -I
+CFLAGS		=	-Wall -g -I
 
 # directories definitions:
 BUILD_DIR	=	build
@@ -31,9 +33,8 @@ SRC_DIR		=	src
 
 SRC_FILES	=	\$(BUILD_DIR)/.c
 
-OBJECT_FILES	=	\$(SRC_FILES:.c=.o)
-HEADER_FILES	=	\$(wildcard \$(INCLUDE_DIR)/*.h)
-#OBJECT_FILE = \$(patsubst \$(SRC_DIR)/%.c,\$(BUILD_DIR)/%.o,\$(SRC_FILES))
+OBJECT_FILES=	\$(SRC_FILES:.c=.o)
+HEADER_FILES=	\$(wildcard \$(INCLUDE_DIR)/*.h)
 
 \$(BUILD_DIR)/%.o: \$(SRC_DIR)/%.c \$(INCLUDE_DIR)/%.h
 	@\$(CC) \$(CFLAGS)\$(INCLUDE_DIR) -c \$< -o \$@
@@ -53,5 +54,20 @@ clean:
 .PHONY: delete_files
 delete_files:
 	@rm -f	\$(BUILD_DIR)/* \$(SRC_DIR)/* \$(INCLUDE_DIR)/*
-
 EOF
+
+# generating the .gitignore file:
+if [ "$2" = "-i" ]; then
+	touch $PROJECT_DIR/.gitignore
+	cat > $PROJECT_DIR/.gitignore << EOF
+# The gitignore file specifies intentionally untracked files that Git
+# should ignore.
+#
+
+*
+!Makefile
+!*.c
+!*.h
+!*/
+EOF
+fi

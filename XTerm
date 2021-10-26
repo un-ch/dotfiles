@@ -7,9 +7,10 @@ xterm*background: black
 xterm*cursorBlink: true
 xterm*colorMode: false
 xterm*cursorUnderLine: true
-!xterm*cursorColor (-cr grey)
+!xterm*cursorColor: grey (-cr grey)
+!xterm*cursorOffTime: 800
 
-xterm*VT100*geometry:80x15
+xterm*geometry:70x15
 !!!!!!!!!!!!!!!!!!!!!!
 !dark-dark grey color:
 !!!!!!!!!!!!!!!!!!!!!!

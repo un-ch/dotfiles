@@ -23,12 +23,13 @@ sed -i '135d;144d' foo_file
 #make special symbol replacing:
 sed -i 's/\[x\]/\[!\]/g' foo_file
 
-
 #label manual from the todo.txt file:
 [!] - todo today;
 [ ] - todo tomorrow;
 [?] - todo later; 
 [x] - done;
+#show today tasks without "[0]" symbols:
+tod | cut -d']' -f 2
 
 #grep through the todo_list:
 grep '\[ \]' todo_list.txt
@@ -216,7 +217,7 @@ setxkbmap us
 setxkbmap ru
 
 #change the volume:
-amixer sset 'Master' 50%
+amixer sset 'Master' 75%
 
 redshift -l 50.45:30.52 & exit
 
@@ -244,7 +245,6 @@ xterm: paste to the file from buffer
 
 git push origin --delete not_needed_branch
 
-#test file speed ?
 time ./a.out
 
 #execute grep results
@@ -252,3 +252,16 @@ grep time ~/commands.sh | bash
 
 #run gcc from vim:
 !gcc %
+
+apt-get install gimagereader
+apt-get install tesseract-ocr-rus
+
+killall -HUP foo_soft
+
+#firefox: back key
+CTRL + [
+
+#mplayer: disable album art:
+mplayer -vo null
+# xterm cursor changed to steady bar
+echo -e -n "\x1b[\x36 q" # changes to steady bar

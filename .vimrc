@@ -41,8 +41,14 @@ hi LineNr NONE
 hi CursorLineNr NONE
 hi Folded NONE
 hi Search NONE
+"hi Visual cterm=bold
+"hi StatusLineTerm ctermbg=darkgrey
+"dark-dark grey:
+hi StatusLineTerm ctermbg=black ctermfg=233
+"set (as well) style of brackets while autocompletes:  
+hi MatchParen cterm=bold ctermbg=none ctermfg=none
 
-"hi Folded ctermfg=green
+"hi Folded ctermfg=darkgrey
 "hi Folded ctermbg=darkgrey
 
 "############################

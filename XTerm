@@ -1,24 +1,26 @@
-!xterm*faceName: Monospace
+
 xterm*faceName: Notosansmono
 !xterm*faceName: Freemonooboldoblique
+!xterm*faceName: Monospace
 !xterm*faceName: Liberationmono
+
 xterm*faceSize: 16
+
 xterm*background: black
-xterm*cursorBlink: true
+!dark-dark-grey font color:
+xterm*foreground: rgb:40/40/40
+!xterm*foreground: darkgreen
+
 xterm*colorMode: false
+
 xterm*cursorUnderLine: true
+xterm*cursorBlink: false
 !xterm*cursorColor: grey (-cr grey)
-!xterm*cursorOffTime: 800
+xterm*cursorOffTime: 600
 
 xterm*geometry:70x15
-!!!!!!!!!!!!!!!!!!!!!!
-!dark-dark grey color:
-!!!!!!!!!!!!!!!!!!!!!!
-xterm*foreground: rgb:40/40/40
 
-!xterm*foreground: darkgreen
 !xterm*selectToClipboard: true
-
 XTerm*VT100.Translations:       #override\n\
  Shift Ctrl <KeyPress> v: insert-selection(CLIPBOARD)\n\
  Shift Ctrl <KeyPress> c: copy-selection(CLIPBOARD)\n

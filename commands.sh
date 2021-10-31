@@ -263,5 +263,9 @@ CTRL + [
 
 #mplayer: disable album art:
 mplayer -vo null
-# xterm cursor changed to steady bar
+
+#xterm cursor changed to steady bar
 echo -e -n "\x1b[\x36 q" # changes to steady bar
+
+#test on freebsd:
+ntpdate -v -b in.pool.ntp.org

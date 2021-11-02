@@ -1,11 +1,21 @@
 syntax off
 set number relativenumber
 
-nmap <leader>t :bel ter<cr><c-W><c-W>:resize +15<cr><c-W><c-W>
+nmap <leader>t :bel ter<esc>
+	\/bin/echo -e -n "\x1b[\x34 q"<enter>
+	\clear<enter>
+	"<cr><c-W><c-W>:resize +5<cr><c-W><c-W>
+
+" scrolling buffers with <tab> (<shift>+<tab):
+nnoremap  <silent>   <tab>  :if &modifiable && !&readonly 
+	\&& &modified <CR> :write<CR> :endif<CR>:bnext<CR>
+nnoremap  <silent> <s-tab>  :if &modifiable && !&readonly 
+	\&& &modified <CR> :write<CR> :endif<CR>:bprevious<CR>
 
 "automatic closing branckets:
 "inoremap {<CR> {<CR>}<C-o>0
 
+set noshowcmd
 set hidden "move to another buffer without saving the current file 
 set noincsearch
 set smartcase

@@ -1,0 +1,17 @@
+[begin] (bbkeys configuration file)
+	[config]
+		[option] (autoConfig) {false}
+	[end]
+	[keybindings] (begin keybindings)
+		#[NextWindow] (Mod1-Tab)
+		[NextWindow] (Mod1-H)
+		[nextWorkspace] (Mod1-K)
+		[prevWorkspace] (Mod1-J)
+		[Execute] (Mod1-Control-J) {xterm}
+		[Execute] (Mod1-Control-T) {xfce4-terminal}
+		[Execute] (Mod1-Control-D) {goldendict}
+		[Execute] (Control-1) {setxkbmap us}
+		[Execute] (Control-2) {setxkbmap ru}
+		[Close] (Mod1-F4)
+	[end]
+[end]

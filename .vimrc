@@ -15,6 +15,9 @@ nnoremap  <silent> <s-tab>  :if &modifiable && !&readonly
 "automatic closing branckets:
 "inoremap {<CR> {<CR>}<C-o>0
 
+" constant showing the file name: 
+set laststatus=0
+
 set noshowcmd
 set hidden "move to another buffer without saving the current file 
 set noincsearch
@@ -54,7 +57,7 @@ hi Search NONE
 "hi Visual cterm=bold
 "hi StatusLineTerm ctermbg=darkgrey
 "dark-dark grey:
-hi StatusLineTerm ctermbg=black ctermfg=233
+hi StatusLineTerm cterm=none ctermbg=black ctermfg=233
 "set (as well) style of brackets while autocompletes:  
 hi MatchParen cterm=bold ctermbg=none ctermfg=none
 

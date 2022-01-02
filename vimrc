@@ -1,9 +1,12 @@
 syntax off
 set number relativenumber
 
+" set terminal emulator below vim file:
+" manage <\>+<t> hotkey:
 nmap <leader>t :bel ter<esc>
-	\/bin/echo -e -n "\x1b[\x34 q"<enter>
-	\clear<enter>
+	" underlined cursor:
+	"\/bin/echo -e -n "\x1b[\x34 q"<enter>
+	"\clear<enter>
 	"<cr><c-W><c-W>:resize +5<cr><c-W><c-W>
 
 " scrolling buffers with <tab> (<shift>+<tab):
@@ -40,10 +43,10 @@ set autoindent
 "set noexpandtab
 
 "controling the number of 'space' characters while tab key pressed:
-set tabstop=4
+set tabstop=2
 
 "indentation several lines at once:
-set shiftwidth=4
+set shiftwidth=2
 
 "set list
 "set listchars=tab:>-

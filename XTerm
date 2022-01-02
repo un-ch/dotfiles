@@ -1,4 +1,3 @@
-
 xterm*faceName: Notosansmono
 !xterm*faceName: Freemonooboldoblique
 !xterm*faceName: Monospace
@@ -13,8 +12,9 @@ xterm*foreground: rgb:40/40/40
 
 xterm*colorMode: false
 
-xterm*cursorUnderLine: true
-xterm*cursorBlink: false
+!xterm*cursorUnderLine: true
+xterm*cursorBlock: true
+!xterm*cursorBlink: true
 !xterm*cursorColor: grey (-cr grey)
 xterm*cursorOffTime: 600
 

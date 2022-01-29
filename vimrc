@@ -15,8 +15,11 @@ nnoremap  <silent>   <tab>  :if &modifiable && !&readonly
 nnoremap  <silent> <s-tab>  :if &modifiable && !&readonly 
 	\&& &modified <CR> :write<CR> :endif<CR>:bprevious<CR>
 
-"automatic closing branckets:
+"automatic closing brackets:
+inoremap {<CR>  {<CR>}<Esc>O
 "inoremap {<CR> {<CR>}<C-o>0
+
+inoremap /*          /**/<Left><Left>
 
 " constant showing the file name: 
 set laststatus=0

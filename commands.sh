@@ -23,12 +23,6 @@ sed -i '135d;144d' foo_file
 #make special symbol replacing:
 sed -i 's/\[x\]/\[!\]/g' foo_file
 
-#dealing with todo file:
-grep -n '^0:' todo_file | cut -d':' -f1,3-
-
-#grep without regular expressions:
-grep -F [!] foo_file
-
 ps aux | grep mysql | grep -V grep
 mysql -u root -p my_db_name
 
@@ -81,7 +75,7 @@ vim ~/.config/xfce4/terminal/terminalrc
 :Vexplore!
 
 #mplayer changing the audio track in the video file:
-<#>
+#
 
 #mplayer fullscreeen video:
 -fs
@@ -96,7 +90,7 @@ vim ~/.config/xfce4/terminal/terminalrc
 while read line; do
 	firefox -private-window "$line" &
 	sleep 1
-done < data_file
+done < /home/us/data_file
 
 #vim: replacing in the whole text:
 :%s/<search_text>/<replace_text>/g
@@ -140,7 +134,10 @@ echo $(date +%F) >> foo_file
 #ls command + group directories first:
 ls -F --g
 
-tar -xf foo_file*.tar.xz
+#-n flag is for the line numbers:
+grep -nF '[!]' foo_file
+
+tar -xf palemoon-29.1.0.linux-x86_64-gtk2.tar.xz
 
 #list of sleeping processes:
 jobs
@@ -154,6 +151,11 @@ xterm -cm
 
 #disabled beep sound on dell inspiron (freebsd os):
 echo "sysctl kern.vt.enable_bell=0" >> /etc/sysctl.conf
+
+# ?renaming several files:
+for file in st*.sh ; do
+	mv st3.sh stol_3.sh;
+done
 
 # rotate the screen:
 xrandr --output DP1 --rotate left
@@ -177,7 +179,7 @@ setxkbmap ru
 #change the volume:
 amixer sset 'Master' 75%
 
-redshift -l 10.23:88.55 & exit
+redshift -l coordinates:coordinates & exit
 
 vim: undolist
 
@@ -185,23 +187,26 @@ vim: undolist
 #'160' - number of the line
 $(sed -n 160p command_script.sh)
 
-# vim: centered cursor in the screen:
+#vim: display several lines after eof
 <zz>
 
-# running wicd_network_manager:
+#printing variable from the Makefile:
+$(info VAR="$(VAR_VALUE)")
+
+#running wicd_network_manager:
 wicd-client
 
-# xterm: paste to the file from buffer
+xterm: paste to the file from buffer
 <ctrl + insert>
 
 git push origin --delete not_needed_branch
 
 time ./a.out
 
-# execute grep results
+#execute grep results
 grep time ~/commands.sh | bash
 
-# run gcc from vim:
+#run gcc from vim:
 !gcc %
 
 apt-get install gimagereader
@@ -218,6 +223,9 @@ mplayer -vo null
 # xterm cursor changed to steady bar:
 echo -e -n "\x1b[\x36 q" # changes to steady bar
 
+# test on freebsd:
+ntpdate -v -b in.pool.ntp.org
+
 make 2>&1 | less
 
 # vim: delete line by pattern:
@@ -227,10 +235,10 @@ make 2>&1 | less
 ZZ
 
 # git: use specified name for the initial branch in a newly \
-# created repo:
+created repo:
 git init -b main
 
-# move firefox window to workspace 1;
+# move firefox window to workspace_0;
 wmctrl -r Firefox -t 0
 
 # vim: jump to this next word occurrence:
@@ -244,10 +252,10 @@ ctrl+b (1/2 screen: ctrl+u)
 ctrl+f (1/2 screen: ctlr+d)
 
 # kill qbit process by its pid:
-~$ kill $(ps aux | grep qbit | grep -v grep | cut -d' ' -f 8)
+>_: kill $(ps aux | grep qbit | grep -v grep | cut -d' ' -f 8)
 
 # execute the command through its line number in commands.sh file:
-~$ sed '217q;d' commands.sh | bash
+>_: sed '217q;d' commands.sh | bash
 
 # vim: go to the beginning of current or previous word:
 <b>
@@ -264,3 +272,32 @@ ctrl+f (1/2 screen: ctlr+d)
 # ctags:
 ctrl-] / ctrl-t
 
+# vim: open foo_file at concrete line:
+>_: vim +100 foo_file
+
+git switch <existing_branch>
+git switch -c <new_branch>
+# unix scan tool:
+simple-scan
+
+# git pull request:
+-fork project;
+-inside forked prj: change source code;
+-select <create new branch for this commit...>;
+-<propose changes>;
+-<create pull request>;
+-<pull requests>;
+-<New pull request>;
+-select branch;
+-<create pull request>;
+-add comments;
+-<create pull request>;
+-check "main" prj repository for new pull request;
+
+without creating the new branch:
+-select <commit directly to the main branch>;
+-<commit changes>;
+-<new pull request>;
+
+# disassebling:
+objdump -M intel -h -d a.out

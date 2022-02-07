@@ -1,9 +1,12 @@
-xterm*faceName: Notosansmono
+!xterm*faceName: Notosansmono
+!xterm*faceName: Luxi Mono
 !xterm*faceName: Freemonooboldoblique
 !xterm*faceName: Monospace
 !xterm*faceName: Liberationmono
+!xterm*faceName: DejaVuSansMono
+xterm*faceName: NotoMono
 
-xterm*faceSize: 16
+xterm*faceSize: 14
 
 xterm*background: black
 !dark-dark-grey font color:

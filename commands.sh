@@ -301,3 +301,5 @@ without creating the new branch:
 
 # disassebling:
 objdump -M intel -h -d a.out
+
+ntpdate pool.ntp.org

@@ -6,11 +6,18 @@
 !xterm*faceName: DejaVuSansMono
 xterm*faceName: NotoMono
 
-xterm*faceSize: 14
+xterm*faceSize: 11
 
 xterm*background: black
+
 !dark-dark-grey font color:
-xterm*foreground: rgb:40/40/40
+!xterm*foreground: rgb:40/40/40
+
+!dark-grey font color:
+xterm*foreground: rgb:66/66/66
+
+!xterm*foreground: grey
+!xterm*foreground: white
 !xterm*foreground: darkgreen
 
 xterm*colorMode: false

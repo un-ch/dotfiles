@@ -307,3 +307,6 @@ ntpdate pool.ntp.org
 # disable beeping (devuan):
 rmmod pcspkr ;
 echo "blacklist pcspkr" >>/etc/modprobe.d/blacklist.conf
+
+# manage laptop display brightness (devuan):
+xbacklight -set 50

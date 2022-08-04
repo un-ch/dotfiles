@@ -5,6 +5,7 @@ PROGRAM_LIST="eog \
 	gcc \
 	g++ \
 	nasm \
+	ssh \
 	redshift \
 	geoclue-2.0 \
 	libncurses5-dev \
@@ -12,6 +13,7 @@ PROGRAM_LIST="eog \
 	qbittorrent \
 	texlive-base \
 	texlive-latex-base\
+	texlive-latex-extra \
 	universal-ctags \
 	mplayer \
 	vlc \
@@ -20,5 +22,11 @@ PROGRAM_LIST="eog \
 	gimp \
 	chromium \
 	firefox-esr \
+	doxygen \
+	make \
+	cmake \
+	i3 \
+	i3-status \
+	youtube-dl \
 	"
 apt-get install  $PROGRAM_LIST

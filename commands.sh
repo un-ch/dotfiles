@@ -277,9 +277,27 @@ ctrl-] / ctrl-t
 
 git switch <existing_branch>
 git switch -c <new_branch>
-
 # unix scan tool:
 simple-scan
+
+# git pull request:
+-fork project;
+-inside forked prj: change source code;
+-select <create new branch for this commit...>;
+-<propose changes>;
+-<create pull request>;
+-<pull requests>;
+-<New pull request>;
+-select branch;
+-<create pull request>;
+-add comments;
+-<create pull request>;
+-check "main" prj repository for new pull request;
+
+without creating the new branch:
+-select <commit directly to the main branch>;
+-<commit changes>;
+-<new pull request>;
 
 # disassebling:
 objdump -M intel -h -d a.out
@@ -292,3 +310,22 @@ echo "blacklist pcspkr" >>/etc/modprobe.d/blacklist.conf
 
 # manage laptop display brightness (devuan):
 xbacklight -set 50
+
+#git: show files currently being tracked
+git ls-tree -r your_branch --name-only
+
+pavucontrol
+
+youtube-dl -x --audio-format mp3 youtube_link
+
+source ~/.bashrc
+
+# mplayer -af scaletempo -speed 1.5 *
+
+lsb_release -a
+
+ssh us@ip_adress
+
+#mplayer: onscreen display (OSD) showing:
+<o>
+

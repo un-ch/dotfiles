@@ -7,14 +7,27 @@
 # The following line should contain a sharp s:
 # ß
 # If the above line is not correctly displayed, fix your editor first!
+#
 
 general {
 	colors = true
 	interval = 5
 }
 
+order += "battery 0"
 order += "tztime local"
 
 tztime local {
-	format = "%Y-%m-%d %H:%M "
+	format = " %H:%M "
 }
+
+#battery 0 {
+#        format = "%status %percentage %remaining %emptytime "
+#        format_down = "no battery"
+#        status_chr = "chr"
+#        status_bat = "bat"
+#        status_unk = "unk"
+#        status_full = "full"
+#        path = "/sys/class/power_supply/BAT%d/uevent"
+#        low_threshold = 10
+#}

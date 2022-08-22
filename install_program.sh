@@ -4,6 +4,7 @@ PROGRAM_LIST="eog \
 	vim \
 	gcc \
 	g++ \
+	clang \
 	nasm \
 	ssh \
 	redshift \
@@ -28,5 +29,9 @@ PROGRAM_LIST="eog \
 	i3 \
 	i3-status \
 	youtube-dl \
+	bpftrace \
+	strace \
 	"
+
 apt-get install  $PROGRAM_LIST
+atop

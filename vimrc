@@ -4,10 +4,11 @@ set number relativenumber
 " set terminal emulator below vim file:
 " manage <\>+<t> hotkey:
 nmap <leader>t :bel ter<esc>
-	" underlined cursor:
-	"\/bin/echo -e -n "\x1b[\x34 q"<enter>
-	"\clear<enter>
-	"<cr><c-W><c-W>:resize +5<cr><c-W><c-W>
+
+" underlined cursor:
+"\/bin/echo -e -n "\x1b[\x34 q"<enter>
+"\clear<enter>
+"<cr><c-W><c-W>:resize +5<cr><c-W><c-W>
 
 " scrolling buffers with <tab> (<shift>+<tab):
 nnoremap  <silent>   <tab>  :if &modifiable && !&readonly 
@@ -16,16 +17,16 @@ nnoremap  <silent> <s-tab>  :if &modifiable && !&readonly
 	\&& &modified <CR> :write<CR> :endif<CR>:bprevious<CR>
 
 "automatic closing brackets:
-inoremap {<CR>  {<CR>}<Esc>O
+"inoremap {<CR>  {<CR>}<Esc>O
 "inoremap {<CR> {<CR>}<C-o>0
 
-inoremap /*          /**/<Left><Left>
+"inoremap /*          /**/<Left><Left>
 
 " constant showing the file name: 
 set laststatus=0
 
 set noshowcmd
-set hidden "move to another buffer without saving the current file 
+set hidden					"move to another buffer without saving the current file 
 set noincsearch
 set smartcase
 set ignorecase
@@ -46,10 +47,10 @@ set autoindent
 "set noexpandtab
 
 "controling the number of 'space' characters while tab key pressed:
-set tabstop=2
+set tabstop=4
 
 "indentation several lines at once:
-set shiftwidth=2
+set shiftwidth=4
 
 "set list
 "set listchars=tab:>-

@@ -43,6 +43,7 @@ bindsym Control+$alt_key+j exec xterm
 bindsym Control+$alt_key+t exec xfce4-terminal
 
 bindsym Control+1 exec setxkbmap us
+bindsym Control+3 exec setxkbmap ua
 bindsym Control+2 exec setxkbmap ru
 
 # volume control:

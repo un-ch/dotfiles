@@ -277,6 +277,27 @@ ctrl-] / ctrl-t
 
 git switch <existing_branch>
 git switch -c <new_branch>
+# unix scan tool:
+simple-scan
+
+# git pull request:
+-fork project;
+-inside forked prj: change source code;
+-select <create new branch for this commit...>;
+-<propose changes>;
+-<create pull request>;
+-<pull requests>;
+-<New pull request>;
+-select branch;
+-<create pull request>;
+-add comments;
+-<create pull request>;
+-check "main" prj repository for new pull request;
+
+without creating the new branch:
+-select <commit directly to the main branch>;
+-<commit changes>;
+-<new pull request>;
 
 # disassebling:
 objdump -M intel -h -d a.out
@@ -314,3 +335,8 @@ xterm -sh 1.5
 i3-msg move container to workspace 2
 
 type cd
+
+tar -xzvf filename.tgz
+
+dpkg -i filename.deb
+

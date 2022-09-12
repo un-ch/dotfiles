@@ -31,7 +31,8 @@ PROGRAM_LIST="eog \
 	youtube-dl \
 	bpftrace \
 	strace \
+	atop \
+	htop \
 	"
 
 apt-get install  $PROGRAM_LIST
-atop

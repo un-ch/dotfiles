@@ -12,8 +12,8 @@ PROGRAM_LIST="eog \
 	libncurses5-dev \
 	libncursesw5-dev \
 	qbittorrent \
-	texlive-base \
-	texlive-latex-base\
+	#texlive-base \
+	#texlive-latex-base\
 	texlive-latex-extra \
 	universal-ctags \
 	mplayer \
@@ -27,12 +27,17 @@ PROGRAM_LIST="eog \
 	make \
 	cmake \
 	i3 \
-	i3-status \
+	i3status \
 	youtube-dl \
 	bpftrace \
 	strace \
+	valgrind \
 	atop \
 	htop \
+	plantuml \
+	doxygen \
+	graphviz \
+	unrar \
 	"
 
 apt-get install  $PROGRAM_LIST

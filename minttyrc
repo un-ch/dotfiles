@@ -1,0 +1,16 @@
+CursorBlinks=no
+Font=Consolas
+FontHeight=16
+Columns=150
+Scrollbar=none
+Rows=40
+BellTaskbar=no
+ForegroundColour=139,139,139
+CursorType=block
+BellType=0
+ThemeFile=xterm
+
+Blue=66,66,66
+FontSmoothing=full
+BoldAsColour=no
+BoldAsFont=yes

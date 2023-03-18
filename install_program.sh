@@ -38,6 +38,7 @@ PROGRAM_LIST="eog \
 	doxygen \
 	graphviz \
 	unrar \
+	barrier \
 	"
 
 apt-get install  $PROGRAM_LIST

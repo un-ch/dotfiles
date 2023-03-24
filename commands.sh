@@ -311,7 +311,7 @@ echo "blacklist pcspkr" >>/etc/modprobe.d/blacklist.conf
 # manage laptop display brightness (devuan):
 xbacklight -set 50
 
-#git: show files currently being tracked
+# git: show files currently being tracked
 git ls-tree -r your_branch --name-only
 
 pavucontrol
@@ -326,7 +326,7 @@ lsb_release -a
 
 ssh us@ip_adress
 
-#mplayer: onscreen display (OSD) showing:
+# mplayer: onscreen display (OSD) showing:
 <o>
 
 # xterm: set space between lines: 

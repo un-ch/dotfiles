@@ -1,5 +1,14 @@
 syntax off
 set number relativenumber
+"set nonumber
+
+"set list listchars=tab:»-,trail:·,extends:»,precedes:«
+"set list listchars=tab:..,trail:·,extends:»,precedes:«
+"set list listchars=tab:..,extends:»,precedes:«
+
+":highlight SpecialKey term=NONE cterm=NONE gui=NONE
+
+let g:NERDTreeNodeDelimiter = "\u00a0"
 
 " set terminal emulator below vim file:
 " manage <\>+<t> hotkey:
@@ -47,10 +56,10 @@ set autoindent
 "set noexpandtab
 
 "controling the number of 'space' characters while tab key pressed:
-set tabstop=4
+set tabstop=2
 
 "indentation several lines at once:
-set shiftwidth=4
+set shiftwidth=2
 
 "set list
 "set listchars=tab:>-
@@ -91,7 +100,5 @@ hi MatchParen cterm=bold ctermbg=none ctermfg=none
 "rightb vert term
 "set backspace=indent,eol,start
 "set showcmd
-"set autoindent
 "set expandtab
-"set autoindent
 "set numberwidth=8	

@@ -160,6 +160,9 @@ done
 # rotate the screen:
 xrandr --output DP1 --rotate left
 
+# connect the second monitor (i3 wm):
+xrandr --output HDMI1 --auto --right-of LVDS1
+
 # grep with ignore case:
 grep -i foo_pattern foo_file;
 grep -y foo_pattern foo_file;
@@ -311,7 +314,7 @@ echo "blacklist pcspkr" >>/etc/modprobe.d/blacklist.conf
 # manage laptop display brightness (devuan):
 xbacklight -set 50
 
-# git: show files currently being tracked
+#git: show files currently being tracked
 git ls-tree -r your_branch --name-only
 
 pavucontrol
@@ -326,7 +329,7 @@ lsb_release -a
 
 ssh us@ip_adress
 
-# mplayer: onscreen display (OSD) showing:
+#mplayer: onscreen display (OSD) showing:
 <o>
 
 # xterm: set space between lines: 
@@ -339,4 +342,3 @@ type cd
 tar -xzvf filename.tgz
 
 dpkg -i filename.deb
-

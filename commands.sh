@@ -340,3 +340,5 @@ tar -xzvf filename.tgz
 
 dpkg -i filename.deb
 
+# command-line network manager
+nmcli

@@ -1,6 +1,7 @@
 #!/bin/bash
 
 PROGRAM_LIST="eog \
+	git \
 	vim \
 	gcc \
 	g++ \
@@ -12,8 +13,8 @@ PROGRAM_LIST="eog \
 	libncurses5-dev \
 	libncursesw5-dev \
 	qbittorrent \
-	#texlive-base \
-	#texlive-latex-base\
+	texlive-base \
+	texlive-latex-base\
 	texlive-latex-extra \
 	universal-ctags \
 	mplayer \
@@ -39,6 +40,22 @@ PROGRAM_LIST="eog \
 	graphviz \
 	unrar \
 	barrier \
+	qtcreator \
+	qtbase5-dev \
+	qttools5-dev \
+	xorg-dev \
+	xbacklight \
+	libssl-dev \
+	libx11-dev \
+	libsodium-dev \
+	libgl1-mesa-glx \
+	libegl1-mesa \
+	libcurl4-openssl-dev \
+	libavahi-compat-libdnssd-dev \
+	qtdeclarative5-dev \
+	libqt5svg5-dev \
+	libnotify-dev \
+	libgdk-pixbuf2.0-dev \
+	libglib2.0-dev \
 	"
-
 apt-get install  $PROGRAM_LIST

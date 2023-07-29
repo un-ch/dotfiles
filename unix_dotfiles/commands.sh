@@ -345,3 +345,7 @@ dpkg -i filename.deb
 
 # command-line network manager
 nmcli
+
+# make CTRL-ALT-DEL halt the system ('-h' instead '-r') in /etc/inittab file:
+# What to do when CTRL-ALT-DEL is pressed.
+ca:12345:ctrlaltdel:/sbin/shutdown -t1 -a -h now

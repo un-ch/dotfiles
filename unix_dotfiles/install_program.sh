@@ -57,5 +57,6 @@ PROGRAM_LIST="eog \
 	libgdk-pixbuf2.0-dev \
 	libglib2.0-dev \
 	keepass2 \
+	ncal \
 	"
 apt-get install  $PROGRAM_LIST

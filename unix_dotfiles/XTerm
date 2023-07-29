@@ -26,7 +26,7 @@ xterm*colorMode: false
 xterm*cursorBlock: true
 !xterm*cursorBlink: true
 !xterm*cursorColor: grey (-cr grey)
-xterm*cursorOffTime: 600
+!xterm*cursorOffTime: 600
 
 xterm*geometry:70x15
 

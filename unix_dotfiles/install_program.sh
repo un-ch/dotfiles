@@ -39,7 +39,6 @@ PROGRAM_LIST="eog \
 	doxygen \
 	graphviz \
 	unrar \
-	barrier \
 	qtcreator \
 	qtbase5-dev \
 	qttools5-dev \
@@ -57,5 +56,6 @@ PROGRAM_LIST="eog \
 	libnotify-dev \
 	libgdk-pixbuf2.0-dev \
 	libglib2.0-dev \
+	keepass2 \
 	"
 apt-get install  $PROGRAM_LIST

@@ -1,0 +1,7 @@
+[user]
+	name = Anatolii Charikov
+	email = pepsh6881@gmail.com
+[core]
+	editor = vim
+[init]
+	defaultBranch = main

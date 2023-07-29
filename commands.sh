@@ -305,7 +305,7 @@ objdump -M intel -h -d a.out
 ntpdate pool.ntp.org
 
 # disable beeping (devuan):
-rmmod pcspkr ;
+rmmod pcspkr
 echo "blacklist pcspkr" >>/etc/modprobe.d/blacklist.conf
 
 # manage laptop display brightness (devuan):

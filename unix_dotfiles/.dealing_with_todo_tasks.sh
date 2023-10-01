@@ -9,7 +9,8 @@ if [ "$LAST_ACCESS_DATE_TO_DATA_FILE" = "$TODAY_DATE" ]; then
 fi
 
 TODAY_DATE=$(date "+%F" | cut -d'-' -f2,3)
-NEXTDAY_DATE=$(date "+%F" --date="next day" | cut -d'-' -f2,3)
+NEXT_DAY_DATE=$(date "+%F" --date="next day" | cut -d'-' -f2,3)
+NEXT_DAY_AFTER_TOMMOROW_DATE=$(date "+%F" --date="+2 day" | cut -d'-' -f2,3)
 
 TODAY_TASK_LABEL=0
 NEXT_DAY_TASK_LABEL=1
@@ -22,7 +23,8 @@ sed -i "s/^$NEXT_DAY_TASK_LABEL:/$TODAY_TASK_LABEL:/g" $DATA_FILE
 sed -i "s/^$NEXT_DAY_AFTER_TOMORROW_LABEL:/$NEXT_DAY_TASK_LABEL:/g" $DATA_FILE
 
 sed -i "s/^$TODAY_DATE:/$TODAY_TASK_LABEL:/g" $DATA_FILE
-sed -i "s/^$NEXTDAY_DATE:/$NEXT_DAY_TASK_LABEL:/g" $DATA_FILE
+sed -i "s/^$NEXT_DAY_DATE:/$NEXT_DAY_TASK_LABEL:/g" $DATA_FILE
+sed -i "s/^$NEXT_DAY_AFTER_TOMMOROW_DATE:/$NEXT_DAY_AFTER_TOMORROW_LABEL:/g" $DATA_FILE
 
 TODAY_DATE=$(date "+%F")
 sed -i "1s/[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]/$TODAY_DATE/" $DATA_FILE

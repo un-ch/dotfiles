@@ -21,23 +21,22 @@ alias foxp='firefox --private-window & exit'
 alias pal='palemoon & exit'
 alias palp='palemoon --private-window & exit'
 alias chrom='chromium & exit'
-alias algo='cd /home/us/downloads/algoexpert+systemsexpert/become_algorithms_expert/01_easy/'
 alias mplayer_faster='mplayer -af scaletempo -speed 1.5'
-alias prj='cd /home/us/prj'
-alias addew='/home/us/prj/addew/addew.sh'
 
 DATA_FILE=/home/us/todo
 # today task:
 alias tod='grep -n "^0:" $DATA_FILE | cut -d':' -f1,3,4'
 # nextday task:
 alias tom='grep -n "^1:" $DATA_FILE | cut -d':' -f1,3,4'
+
 # later task:
-alias lat='grep -n "^!:" $DATA_FILE | cut -d':' -f1,3,4'
+#alias lat='grep -n "^!:" $DATA_FILE | cut -d':' -f1,3,4'
+alias lat='grep -En "^!:|^[0-9][0-9]-[0-9][0-9]:" $DATA_FILE | cut -d':' -f1,2,3,4'
+
 # done task:
 # alias don='grep -n "^x:" $DATA_FILE | cut -d':' -f1,3,4'
 # dated task:
-alias dat='grep -n "^[0-9][0-9]-[0-9][0-9]:\|\
-^[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]:" $DATA_FILE'
+alias dat='grep -n "^[0-9][0-9]-[0-9][0-9]:" $DATA_FILE'
 
 alias press='/home/us/./press.sh & exit'
 alias shutdown='sudo /sbin/shutdown now'

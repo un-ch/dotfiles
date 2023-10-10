@@ -6,6 +6,10 @@
 !xterm*faceName: DejaVuSansMono
 xterm*faceName: NotoMono
 
+XTerm*vt100.translations: #override \
+    Shift Ctrl <Key> C: copy-selection(CLIPBOARD) \n\
+    Shift Ctrl <Key> V: insert-selection(CLIPBOARD)
+
 xterm*faceSize: 14
 
 xterm*background: black

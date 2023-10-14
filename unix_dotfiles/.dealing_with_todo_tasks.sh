@@ -8,9 +8,10 @@ if [ "$LAST_ACCESS_DATE_TO_DATA_FILE" = "$TODAY_DATE" ]; then
 	exit 1;
 fi
 
-TODAY_DATE=$(date "+%F" | cut -d'-' -f2,3)
-NEXT_DAY_DATE=$(date "+%F" --date="next day" | cut -d'-' -f2,3)
-NEXT_DAY_AFTER_TOMMOROW_DATE=$(date "+%F" --date="+2 day" | cut -d'-' -f2,3)
+TODAY_DATE=$(date "+%d-%m")
+NEXT_DAY_DATE=$(date "+%d-%m" --date="next day")
+
+NEXT_DAY_AFTER_TOMMOROW_DATE=$(date "+%d-%m" --date="+2 day")
 
 TODAY_TASK_LABEL=0
 NEXT_DAY_TASK_LABEL=1

@@ -1,8 +1,8 @@
 #!/bin/bash
 
 DATA_FILE=/home/us/todo
-TODAY_DATE=$(date "+%F")
-LAST_ACCESS_DATE_TO_DATA_FILE=$(grep LAST_ACCESS_DATE_TO_DATA_FILE $DATA_FILE | cut -d':' -f2)
+TODAY_DATE=$(date "+%d-%m")
+LAST_ACCESS_DATE_TO_DATA_FILE=$(grep LAST_ACCESS_DATE_TO_DATA_FILE $DATA_FILE | cut -d'-' -f1,2)
 
 if [ "$LAST_ACCESS_DATE_TO_DATA_FILE" = "$TODAY_DATE" ]; then
 	exit 1;
@@ -27,5 +27,5 @@ sed -i "s/^$TODAY_DATE:/$TODAY_TASK_LABEL:/g" $DATA_FILE
 sed -i "s/^$NEXT_DAY_DATE:/$NEXT_DAY_TASK_LABEL:/g" $DATA_FILE
 sed -i "s/^$NEXT_DAY_AFTER_TOMMOROW_DATE:/$NEXT_DAY_AFTER_TOMORROW_LABEL:/g" $DATA_FILE
 
-TODAY_DATE=$(date "+%F")
-sed -i "1s/[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]/$TODAY_DATE/" $DATA_FILE
+TODAY_DATE=$(date "+%d-%m-%Y")
+sed  -i "1i LAST_ACCESS_DATE_TO_DATA_FILE: $TODAY_DATE" $DATA_FILE

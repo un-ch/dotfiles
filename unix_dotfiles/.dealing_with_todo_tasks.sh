@@ -2,15 +2,14 @@
 
 DATA_FILE=/home/us/todo
 TODAY_DATE=$(date "+%d-%m")
-LAST_ACCESS_DATE_TO_DATA_FILE=$(grep LAST_ACCESS_DATE_TO_DATA_FILE $DATA_FILE | cut -d'-' -f1,2)
+
+LAST_ACCESS_DATE_TO_DATA_FILE=$(grep LAST_ACCESS_DATE_TO_DATA_FILE $DATA_FILE | cut -d'-' -f2,3)
 
 if [ "$LAST_ACCESS_DATE_TO_DATA_FILE" = "$TODAY_DATE" ]; then
 	exit 1;
 fi
 
-TODAY_DATE=$(date "+%d-%m")
 NEXT_DAY_DATE=$(date "+%d-%m" --date="next day")
-
 NEXT_DAY_AFTER_TOMMOROW_DATE=$(date "+%d-%m" --date="+2 day")
 
 TODAY_TASK_LABEL=0
@@ -28,4 +27,4 @@ sed -i "s/^$NEXT_DAY_DATE:/$NEXT_DAY_TASK_LABEL:/g" $DATA_FILE
 sed -i "s/^$NEXT_DAY_AFTER_TOMMOROW_DATE:/$NEXT_DAY_AFTER_TOMORROW_LABEL:/g" $DATA_FILE
 
 TODAY_DATE=$(date "+%d-%m-%Y")
-sed  -i "1i LAST_ACCESS_DATE_TO_DATA_FILE: $TODAY_DATE" $DATA_FILE
+sed  -i "1 s/^.*$/LAST_ACCESS_DATE_TO_DATA_FILE-$TODAY_DATE/" $DATA_FILE

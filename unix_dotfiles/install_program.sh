@@ -2,6 +2,7 @@
 
 PROGRAM_LIST="eog \
 	git \
+	gdb \
 	vim \
 	gcc \
 	g++ \

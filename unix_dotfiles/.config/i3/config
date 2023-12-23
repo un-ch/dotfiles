@@ -124,8 +124,10 @@ set $ws9 "9"
 set $ws10 "10"
 
 # switch to workspace
-bindsym Mod1+k workspace next
-bindsym Mod1+j workspace prev
+bindsym Mod1+l workspace next
+bindsym Mod1+h workspace prev
+#bindsym Mod1+k workspace next
+#bindsym Mod1+j workspace prev
 
 bindsym $alt_key+1 workspace $ws1; exec xterm
 bindsym $alt_key+2 workspace $ws2; exec xterm

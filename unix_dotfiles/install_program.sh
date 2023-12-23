@@ -1,6 +1,8 @@
 #!/bin/bash
 
 PROGRAM_LIST="eog \
+	cppcheck \
+	cppcheck-gui \
 	git \
 	gdb \
 	vim \

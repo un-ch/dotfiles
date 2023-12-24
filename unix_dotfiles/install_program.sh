@@ -1,6 +1,7 @@
 #!/bin/bash
 
 PROGRAM_LIST="eog \
+	backlight \
 	cppcheck \
 	cppcheck-gui \
 	git \

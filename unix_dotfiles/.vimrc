@@ -6,10 +6,20 @@ set number relativenumber
 "set list listchars=tab:..,trail:·,extends:»,precedes:«
 "set list listchars=tab:..,extends:»,precedes:«
 
-":highlight SpecialKey term=NONE cterm=NONE gui=NONE
+highlight VertSplit cterm=NONE
+"set fillchars+=vert:»
+set fillchars+=vert::
 
 let g:NERDTreeNodeDelimiter = "\u00a0"
+let NERDTreeShowHidden=1
 
+" to close automatically when open a file for editing:
+let NERDTreeQuitOnOpen=1
+
+" toggle NERDTree with Ctrl+n:
+map <C-n> :NERDTreeToggle<CR>
+
+":highlight SpecialKey term=NONE cterm=NONE gui=NONE
 " set terminal emulator below vim file:
 " manage <\>+<t> hotkey:
 nmap <leader>t :bel ter<esc>

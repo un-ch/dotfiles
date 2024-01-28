@@ -8,7 +8,7 @@ case $- in
       *) return;;
 esac
 
-export TERM=xterm-color
+#export TERM=xterm-color
 #export TERM=xterm-mono
 export EDITOR=vim
 

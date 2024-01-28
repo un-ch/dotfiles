@@ -1,3 +1,5 @@
+xterm*faceSize: 13
+
 !xterm*faceName: Notosansmono
 !xterm*faceName: Luxi Mono
 !xterm*faceName: Freemonooboldoblique
@@ -10,9 +12,9 @@ XTerm*vt100.translations: #override \
     Shift Ctrl <Key> C: copy-selection(CLIPBOARD) \n\
     Shift Ctrl <Key> V: insert-selection(CLIPBOARD)
 
-xterm*faceSize: 14
-
 xterm*background: black
+
+xterm*allowBoldFonts: false
 
 !dark-dark-grey font color:
 !xterm*foreground: rgb:40/40/40
@@ -20,18 +22,10 @@ xterm*background: black
 !dark-grey font color:
 xterm*foreground: rgb:66/66/66
 
-!xterm*foreground: grey
-!xterm*foreground: white
-!xterm*foreground: darkgreen
+!xterm*colorMode: false
+xterm*colorMode: true
 
-xterm*colorMode: false
-
-!xterm*cursorUnderLine: true
 xterm*cursorBlock: true
-!xterm*cursorBlink: true
-!xterm*cursorColor: grey (-cr grey)
-!xterm*cursorOffTime: 600
-
 xterm*geometry:70x15
 
 !xterm*selectToClipboard: true

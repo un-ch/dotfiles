@@ -8,6 +8,7 @@ case $- in
       *) return;;
 esac
 
+export TERM=xterm-color
 #export TERM=xterm-mono
 export EDITOR=vim
 
@@ -18,8 +19,7 @@ alias la='ls -A'
 alias e='exit'
 alias fox='firefox & exit'
 alias foxp='firefox --private-window & exit'
-alias pal='palemoon & exit'
-alias palp='palemoon --private-window & exit'
+alias pal='/home/us/.soft/palemoon/palemoon & exit'
 alias chrom='chromium & exit'
 alias mplayer_faster='mplayer -af scaletempo -speed 1.5'
 
@@ -31,7 +31,7 @@ alias tom='grep -n "^1:" $DATA_FILE | cut -d':' -f1,3,4'
 
 # later task:
 #alias lat='grep -n "^!:" $DATA_FILE | cut -d':' -f1,3,4'
-alias lat='grep -En "^!:|^[0-9][0-9]-[0-9][0-9]:" $DATA_FILE | cut -d':' -f1,2,3,4'
+alias lat='grep -En "^!:|^[0-9][0-9]-[0-9][0-9]:|^2:" $DATA_FILE | cut -d':' -f1,2,3,4'
 
 # done task:
 # alias don='grep -n "^x:" $DATA_FILE | cut -d':' -f1,3,4'
@@ -42,7 +42,7 @@ alias press='/home/us/./press.sh & exit'
 alias shutdown='sudo /sbin/shutdown now'
 alias telegram='.soft/telegram/telegram & exit'
 alias mmp3='youtube-dl -x --audio-format mp3 $1'
-alias tor='/home/us/.soft/tor-browser_en-US/Browser/./start-tor-browser & exit'
+alias tor='/usr/bin/tor & exit'
 alias simplemind='wine /home/us/.wine/drive_c/Program\ \Files\ \(x86\)/ModelMakerTools/SimpleMind/1.32.1/SimpleMindPro.exe & exit'
 
 function del()

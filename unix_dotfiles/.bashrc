@@ -8,7 +8,7 @@ case $- in
       *) return;;
 esac
 
-#export TERM=xterm-color
+export TERM=xterm-256color
 #export TERM=xterm-mono
 export EDITOR=vim
 
@@ -22,6 +22,10 @@ alias foxp='firefox --private-window & exit'
 alias pal='/home/us/.soft/palemoon/palemoon & exit'
 alias chrom='chromium & exit'
 alias mplayer_faster='mplayer -af scaletempo -speed 1.5'
+alias gia='git add'
+alias gis='git status'
+alias gic='git commit -sm'
+alias gid='git diff'
 
 DATA_FILE=/home/us/todo
 # today task:
@@ -42,7 +46,7 @@ alias press='/home/us/./press.sh & exit'
 alias shutdown='sudo /sbin/shutdown now'
 alias telegram='.soft/telegram/telegram & exit'
 alias mmp3='youtube-dl -x --audio-format mp3 $1'
-alias tor='/usr/bin/tor & exit'
+alias tor='/home/us/.soft/tor-browser_en-US/Browser/start-tor-browser & exit'
 alias simplemind='wine /home/us/.wine/drive_c/Program\ \Files\ \(x86\)/ModelMakerTools/SimpleMind/1.32.1/SimpleMindPro.exe & exit'
 
 function del()
@@ -61,6 +65,20 @@ function don()
 		return 1;
 	fi
 	sed -i "$1s/^0:/x:/" $DATA_FILE
+}
+
+function xt()
+{
+	if [ "$1" = "" ]; then
+		echo "error: no workspace number";
+		exit;
+	fi
+
+	WORKSPACE_NUMBER=$1
+
+	CURRENT_DIR=$(pwd)
+
+	/usr/bin/i3-msg workspace $1 1>/dev/null ; xterm -e "cd $CURRENT_DIR; $SHELL" &
 }
 
 # don't put duplicate lines or lines starting with space in the history.

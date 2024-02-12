@@ -6,7 +6,7 @@ Plug 'tomtom/tcomment_vim'
 Plug 'morhetz/gruvbox'
 call plug#end()
 
-if 1
+if 0
 	syntax off
 	hi SpecialKey ctermbg=black ctermfg=239
 else
@@ -64,7 +64,7 @@ set laststatus=2
 hi StatusLine cterm=none ctermbg=darkgray ctermfg=233
 hi StatusLineNC cterm=none ctermbg=darkgray ctermfg=black
 hi StatusLineTerm cterm=none ctermbg=darkgray ctermfg=black
-hi StatusLineTermNC cterm=none ctermbg=233 ctermfg=black
+hi StatusLineTermNC cterm=none ctermbg=darkgray ctermfg=black
 
 " [buffer number] followed by filename:
 "set statusline=[%n]\ %t
@@ -124,3 +124,9 @@ hi PmenuSel ctermbg=grey
 hi SignColumn guifg=white
 "hi EndOfBuffer ctermfg=darkgrey guifg=black
 hi Visual ctermbg=darkgrey ctermfg=black
+
+" remap caps lock -> escape keys:
+"au VimEnter * silent! !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
+"au VimLeave * silent! !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Caps_Lock'
+au BufEnter * silent! !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
+au BufLeave * silent! !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Caps_Lock'

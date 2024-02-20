@@ -12,6 +12,13 @@ export TERM=xterm-256color
 #export TERM=xterm-mono
 export EDITOR=vim
 
+
+# Show a current active git branch in the shell prompt
+# export PS1='\t \[\033[01;32m\]\u\[\033[01;34m\] \w\[\033[01;33m\]$(__git_ps1)\[\033[01;34m\] \$\[\033[00m\] '
+
+# Shortcat for the pretty git log. Can be extended with the commit count parameter (last -10, last -35)
+# alias last='git log --graph --all --oneline --decorate '
+
 # some more ls aliases
 
 alias ll='ls -l'
@@ -32,10 +39,10 @@ DATA_FILE=/home/us/todo
 alias tod='grep -n "^0:" $DATA_FILE | cut -d':' -f1,3,4'
 # nextday task:
 alias tom='grep -n "^1:" $DATA_FILE | cut -d':' -f1,3,4'
-
 # later task:
 #alias lat='grep -n "^!:" $DATA_FILE | cut -d':' -f1,3,4'
 alias lat='grep -En "^!:|^[0-9][0-9]-[0-9][0-9]:|^2:" $DATA_FILE | cut -d':' -f1,2,3,4'
+alias now='grep -n "\[\*\]" $DATA_FILE'
 
 # done task:
 # alias don='grep -n "^x:" $DATA_FILE | cut -d':' -f1,3,4'
@@ -80,6 +87,9 @@ function xt()
 
 	/usr/bin/i3-msg workspace $1 1>/dev/null ; xterm -e "cd $CURRENT_DIR; $SHELL" &
 }
+
+
+xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
 
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
@@ -159,7 +169,8 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # colored GCC warnings and errors
-#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+# export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+export GCC_COLORS='error=01;31:warning=01;34:note=01;36:caret=01;32:locus=01:quote=01'
 
 
 # Alias definitions.

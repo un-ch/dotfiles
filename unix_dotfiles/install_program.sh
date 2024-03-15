@@ -63,5 +63,6 @@ PROGRAM_LIST="eog \
 	libglib2.0-dev \
 	keepass2 \
 	ncal \
+	ripgrep \
 	"
 apt-get install  $PROGRAM_LIST

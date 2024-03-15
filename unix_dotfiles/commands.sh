@@ -276,7 +276,7 @@ ctrl+f (1/2 screen: ctlr+d)
 ctrl-] / ctrl-t
 
 # vim: open foo_file at concrete line:
->_: vim +100 foo_file
+vim +100 foo_file
 
 git switch <existing_branch>
 git switch -c <new_branch>
@@ -353,3 +353,29 @@ ca:12345:ctrlaltdel:/sbin/shutdown -t1 -a -h now
 # disable beeping:
 # in /etc/inputrc file:
 set bell-style none
+
+git ls-tree --full-tree --name-only -r HEAD
+
+# firefox configuration file with javascript disable option:
+.mozilla/firefox/4l08zr9j.default-esr/prefs.js
+
+openocd -f interface/stlink.cfg -f target/stm32f4x.cfg -c "program Release/temp_led.elf verify reset exit"
+
+cppcheck --enable=all --addon=misra.json ./ 2>report.txt test.c
+
+xrandr --output HDMI1 --auto --same-as LVDS1
+
+# add to git index all files except one:
+git add --all ':\!src/another_snake_game.c'
+
+git stash apply
+
+# vim - change the text and remain in insert mode:
+<s> 
+
+xrandr --output VGA1 --auto --right-of LVDS1
+
+xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
+xmodmap -e 'clear Lock' -e 'keycode 0x42 = Caps_Lock'
+
+setxkbmap -option caps:escape_shifted_capslock

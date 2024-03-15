@@ -39,6 +39,7 @@ PROGRAM_LIST="eog \
 	valgrind \
 	atop \
 	htop \
+    btop \
 	plantuml \
 	doxygen \
 	graphviz \

@@ -22,17 +22,14 @@ export EDITOR=vim
 # some more ls aliases
 
 alias ll='ls -l'
-alias la='ls -A'
+alias la='ls -AF'
 alias e='exit'
 alias fox='firefox & exit'
 alias foxp='firefox --private-window & exit'
 alias pal='/home/us/.soft/palemoon/palemoon & exit'
 alias chrom='chromium & exit'
 alias mplayer_faster='mplayer -af scaletempo -speed 1.5'
-alias gia='git add'
-alias gis='git status'
-alias gic='git commit -sm'
-alias gid='git diff'
+alias minder='/usr/bin/com.github.phase1geo.minder & exit'
 
 DATA_FILE=/home/us/todo
 # today task:
@@ -54,7 +51,6 @@ alias shutdown='sudo /sbin/shutdown now'
 alias telegram='.soft/telegram/telegram & exit'
 alias mmp3='youtube-dl -x --audio-format mp3 $1'
 alias tor='/home/us/.soft/tor-browser_en-US/Browser/start-tor-browser & exit'
-alias simplemind='wine /home/us/.wine/drive_c/Program\ \Files\ \(x86\)/ModelMakerTools/SimpleMind/1.32.1/SimpleMindPro.exe & exit'
 
 function del()
 {
@@ -89,7 +85,6 @@ function xt()
 }
 
 
-xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
 
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
@@ -170,7 +165,7 @@ fi
 
 # colored GCC warnings and errors
 # export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
-export GCC_COLORS='error=01;31:warning=01;34:note=01;36:caret=01;32:locus=01:quote=01'
+export GCC_COLORS='error=01;31:warning=01;33:note=01;36:caret=01;32:locus=01:quote=01'
 
 
 # Alias definitions.
@@ -192,3 +187,4 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+

@@ -3,7 +3,11 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 "Plug 'sickill/vim-monokai'
 Plug 'tomtom/tcomment_vim'
+" Plug 'Yggdroot/indentLine'
 Plug 'morhetz/gruvbox'
+" Plug 'nathanaelkane/vim-indent-guides'
+"Plug 'prabirshrestha/vim-lsp'
+
 call plug#end()
 
 if 0
@@ -22,14 +26,9 @@ endif
 set number relativenumber
 
 highlight VertSplit cterm=NONE
-"set fillchars+=vert:»
 set fillchars+=vert::
-"set fillchars+=vert:⁞
-"set listchars=tab:⁞\
-"set list listchars=tab:⁞\ ,trail:·,extends:»,precedes:«
-set list listchars=tab:⁞\ 
-"set list listchars=tab:..,trail:·,extends:»,precedes:«
-"set list listchars=tab:..,trail:·,extends:»,precedes:«
+" set list listchars=tab:⁞\ 
+"set list listchars=tab:..,trail:·,extends:»,precedes:«,space:. 
 
 let g:NERDTreeNodeDelimiter = "\u00a0"
 let NERDTreeShowHidden=1
@@ -54,17 +53,20 @@ nnoremap  <silent> <s-tab>  :if &modifiable && !&readonly
 	\&& &modified <CR> :write<CR> :endif<CR>:bprevious<CR>
 
 "automatic closing brackets:
-"inoremap {<CR>  {<CR>}<Esc>O
-"inoremap {<CR> {<CR>}<C-o>0
+" inoremap {<CR>  {<CR>}<Esc>O
+" inoremap {<CR> {<CR>}<C-o>0
 
 " constant showing the file name: 
 set laststatus=2
 "set statusline=%F
 
-hi StatusLine cterm=none ctermbg=darkgray ctermfg=233
-hi StatusLineNC cterm=none ctermbg=darkgray ctermfg=black
-hi StatusLineTerm cterm=none ctermbg=darkgray ctermfg=black
-hi StatusLineTermNC cterm=none ctermbg=darkgray ctermfg=black
+" hi StatusLineTerm cterm=none ctermbg=darkgray ctermfg=black
+" hi StatusLineTermNC cterm=none ctermbg=darkgray ctermfg=black
+
+hi StatusLine cterm=none ctermbg=239 ctermfg=233
+hi StatusLineNC cterm=none ctermbg=239 ctermfg=black
+hi StatusLineTerm cterm=none ctermbg=239 ctermfg=233
+hi StatusLineTermNC cterm=none ctermbg=239 ctermfg=233
 
 " [buffer number] followed by filename:
 "set statusline=[%n]\ %t
@@ -89,12 +91,22 @@ set foldnestmax=10
 set nofoldenable
 set foldlevel=2
 
-"set autoindent
+" Case insensitive search if all lowercase
+set ignorecase smartcase
+
+set incsearch hlsearch showmatch
+
+" set autoindent
+" set smartindent
+
 "controling the number of 'space' characters while tab key pressed:
-set tabstop=2
+set tabstop=4
 
 "indentation several lines at once:
-set shiftwidth=2
+set shiftwidth=4
+
+" tabs -> spaces:
+set expandtab
 
 hi Error NONE
 hi ErrorMsg NONE
@@ -110,7 +122,7 @@ hi NonText NONE
 hi Question NONE
 
 "set (as well) style of brackets while autocompletes:
-hi MatchParen cterm=none ctermbg=none ctermfg=darkgray
+hi MatchParen cterm=none ctermbg=none ctermfg=gray
 
 " bash-like TAB completion
 " set wildmode=longest,list
@@ -126,7 +138,20 @@ hi SignColumn guifg=white
 hi Visual ctermbg=darkgrey ctermfg=black
 
 " remap caps lock -> escape keys:
-"au VimEnter * silent! !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
-"au VimLeave * silent! !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Caps_Lock'
-au BufEnter * silent! !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
-au BufLeave * silent! !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Caps_Lock'
+" au VimEnter * silent! !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
+
+"  au VimLeave * silent! !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Caps_Lock'
+"  au BufEnter * silent! !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
+" au BufLeave * silent! !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Caps_Lock'
+" xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
+" xmodmap -e 'clear Lock' -e 'keycode 0x42 = Caps_Lock'
+
+" EOF symbol changed (tilda -> '-'):
+set fillchars+=eob:-
+
+" hi DiffText   cterm=none ctermfg=blue ctermbg=black gui=none "guifg=Black "guibg=Red
+" hi DiffChange cterm=none ctermfg=green ctermbg=black gui=none "guifg=Black "guibg=LightMagenta
+
+hi DiffText   cterm=none ctermfg=Black ctermbg=Red gui=none guifg=Black guibg=Red
+hi DiffChange cterm=none ctermfg=Black ctermbg=LightMagenta gui=none guifg=Black guibg=LightMagenta
+

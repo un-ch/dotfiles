@@ -64,5 +64,7 @@ PROGRAM_LIST="eog \
 	keepass2 \
 	ncal \
 	ripgrep \
+	gsmartcontrol \
+    openocd \
 	"
 apt-get install  $PROGRAM_LIST

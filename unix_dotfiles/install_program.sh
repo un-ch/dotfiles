@@ -66,5 +66,6 @@ PROGRAM_LIST="eog \
 	ripgrep \
 	gsmartcontrol \
     openocd \
+    ntpdate \
 	"
 apt-get install  $PROGRAM_LIST

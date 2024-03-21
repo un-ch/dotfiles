@@ -40,8 +40,14 @@ let NERDTreeQuitOnOpen=1
 nnoremap <silent> <leader>f :FZF<CR>
 "nmap <C-P> :FZF<CR>
 
-" toggle NERDTree with <tab+n>:
-map <C-n> :NERDTreeToggle<CR>
+" toggle Rg option (FZF) with <leader+r>:
+nnoremap <silent> <leader>r :Rg<CR>
+
+" toggle NERDTree with <ctrl+n>:
+" map <C-n> :NERDTreeToggle<CR>
+
+" toggle NERDTree with <\-key+n>:
+nnoremap <silent> <leader>n :NERDTreeToggle<CR>
 
 " toggle a terminal emulator window below a vim file, manage <\>+<t> hotkey:
 nmap <leader>t :bel ter<esc>
@@ -155,3 +161,5 @@ set fillchars+=eob:-
 hi DiffText   cterm=none ctermfg=Black ctermbg=Red gui=none guifg=Black guibg=Red
 hi DiffChange cterm=none ctermfg=Black ctermbg=LightMagenta gui=none guifg=Black guibg=LightMagenta
 
+" FZF
+nmap <C-P> :FZF<CR>

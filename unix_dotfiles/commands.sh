@@ -381,3 +381,11 @@ xmodmap -e 'clear Lock' -e 'keycode 0x42 = Caps_Lock'
 setxkbmap -option caps:escape_shifted_capslock
 
 plantuml -tpdf uml_file
+
+# turn off the sound
+amixer -D pulse set 'Master' +0 toggle
+# or
+amixer set Master mute
+
+# find the file:
+locate

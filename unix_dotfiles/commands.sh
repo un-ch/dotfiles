@@ -234,7 +234,7 @@ make 2>&1 | less
 # vim: delete line by pattern:
 :g/pattern/d
 
-# vim: save file and exit (<wq!> analog):
+# vim: save file and exit (<wq!> alternative):
 ZZ
 
 # git: use specified name for the initial branch in a newly \
@@ -389,3 +389,10 @@ amixer set Master mute
 
 # find the file:
 locate
+
+# decrease the screen brightness:
+xbacklight -20
+# increase the screen brightness:
+xbacklight +20
+
+ip addr

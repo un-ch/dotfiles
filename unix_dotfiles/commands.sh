@@ -396,3 +396,15 @@ xbacklight -20
 xbacklight +20
 
 ip addr
+
+# vim to move to the next search result:
+<n> or <*>
+
+# vim press to move in the backward direction:
+<N>
+
+# vim go the next matched symbol:
+<ctrl> + g // CTRL-G
+# vim go the prev matched symbol:
+<ctrl> + t // CTRL-T
+

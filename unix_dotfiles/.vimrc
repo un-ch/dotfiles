@@ -10,7 +10,7 @@ Plug 'morhetz/gruvbox'
 
 call plug#end()
 
-if 0
+if 1
 	syntax off
 	hi SpecialKey ctermbg=black ctermfg=239
 else
@@ -163,3 +163,7 @@ hi DiffChange cterm=none ctermfg=Black ctermbg=LightMagenta gui=none guifg=Black
 
 " FZF
 nmap <C-P> :FZF<CR>
+
+" The 'scrolloff' (scroll offset) option determines the minimum number of screen
+" lines that you would like above and below the cursor:
+:set scrolloff=5

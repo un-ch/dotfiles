@@ -153,8 +153,7 @@ bindsym $alt_key+Shift+9 move container to workspace $ws9
 bindsym $alt_key+Shift+0 move container to workspace $ws10
 
 # next window:
-bindsym $alt_key+h focus up
-
+# bindsym $alt_key+h focus up
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -188,6 +187,7 @@ mode "resize" {
         bindsym $mod+r mode "default"
 }
 
+
 bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
@@ -198,5 +198,30 @@ bar {
 	workspace_buttons yes
 	colors {
 		statusline #808080
+        # <colorclass> <border> <background> <text>
+
+        # focused_workspace  #F9FAF9 #16a085 #292F34
+        # focused_workspace  #333333 #222222 #292F34
+        # active_workspace   #333333 #222222 #ffffff
+        # inactive_workspace #333333 #222222 #888888
+        # focused_workspace  #16a085 #222222 #888888
+
+        focused_workspace  #959695 #222222 #888888
+        active_workspace #333333 #222222 #888888
+        inactive_workspace #333333 #222222 #888888
 	}
+    font pango:NotoMono 10
 }
+
+# set the window panel color:
+# class                 border  backgr. text    indicator child_border
+# client.focused          #333333 #222222 #888888 #292d2e   #222222
+client.focused          #333333 #222222 #aeafae #292d2e   #222222
+client.focused_inactive #333333 #222222 #888888 #292d2e   #222222
+
+# # class                 border  backgr. text    indicator child_border
+# client.focused          #4c7899 #285577 #ffffff #2e9ef4   #285577
+# client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
+# client.unfocused        #333333 #222222 #888888 #292d2e   #222222
+# client.urgent           #2f343a #900000 #ffffff #900000   #900000
+# client.background       #ffffff

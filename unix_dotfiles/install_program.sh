@@ -26,7 +26,6 @@ PROGRAM_LIST="eog \
 	atril \
 	evince \
 	gimp \
-	chromium \
 	firefox-esr \
 	doxygen \
 	make \

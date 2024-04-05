@@ -65,6 +65,9 @@ PROGRAM_LIST="eog \
 	ripgrep \
 	gsmartcontrol \
     openocd \
-    ntpdate \
+    gcc-arm-none-eabi \
+    stlink-tools \
+    stm32flash \
+    ntpdate
 	"
 apt-get install  $PROGRAM_LIST

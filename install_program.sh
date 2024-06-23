@@ -68,6 +68,12 @@ PROGRAM_LIST="eog \
     gcc-arm-none-eabi \
     stlink-tools \
     stm32flash \
-    ntpdate
+    ntpdate \
+    gdb-multiarch \
+    ddd \
+    cgdb \
+    gdbserver \
+    fonts-inconsolata \
+    tree
 	"
 apt-get install  $PROGRAM_LIST

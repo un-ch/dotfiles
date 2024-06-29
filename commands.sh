@@ -335,7 +335,8 @@ ssh us@ip_adress
 # xterm: set space between lines: 
 xterm -sh 1.5
 
-i3-msg move container to workspace 2
+/usr/bin/i3-msg move container to workspace 5
+/usr/bin/i3-msg workspace 4 1>/dev/null ; xterm &
 
 type cd
 
@@ -380,8 +381,6 @@ xmodmap -e 'clear Lock' -e 'keycode 0x42 = Caps_Lock'
 
 setxkbmap -option caps:escape_shifted_capslock
 
-plantuml -tpdf uml_file
-
 # turn off the sound
 amixer -D pulse set 'Master' +0 toggle
 # or
@@ -407,4 +406,15 @@ ip addr
 <ctrl> + g // CTRL-G
 # vim go the prev matched symbol:
 <ctrl> + t // CTRL-T
+
+plantuml -DPLANTUML_LIMIT_SIZE=8192 file.uml
+plantuml -tpdf uml_file
+
+# time sync:
+ntpdate time1.google.com
+
+ctags -R .
+
+# vim: terminal window from the right side:
+:vertical botright term
 

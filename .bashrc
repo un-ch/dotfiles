@@ -17,29 +17,32 @@ export EDITOR=vim
 # export PS1='\t \[\033[01;32m\]\u\[\033[01;34m\] \w\[\033[01;33m\]$(__git_ps1)\[\033[01;34m\] \$\[\033[00m\] '
 
 # Shortcat for the pretty git log. Can be extended with the commit count parameter (last -10, last -35)
-# alias last='git log --graph --all --oneline --decorate '
+alias last='git log --graph --all --oneline --decorate '
 
-# some more ls aliases
-
+alias eclipse='/home/us/eclipse/cpp-2024-03/eclipse/eclipse & exit'
 alias ll='ls -l'
-alias la='ls -AF'
+alias la='ls -lAF'
 alias e='exit'
 alias fox='firefox & exit'
 alias foxp='firefox --private-window & exit'
-alias pal='/home/us/.soft/palemoon/palemoon & exit'
+alias pal='/home/us/.soft/palemoon_gtk2/palemoon & exit'
 alias chrom='chromium & exit'
-alias mplayer_faster='mplayer -af scaletempo -speed 1.5'
+alias mplayer_faster='mplayer -fs -af scaletempo -speed 1.5'
 alias minder='/usr/bin/com.github.phase1geo.minder & exit'
+alias cubemx='/home/us/.soft/STM32CubeMX/STM32CubeMX & exit'
+alias cubeide_bak='/home/us/st/stm32cubeide_1.15.1/stm32cubeide & exit'
+alias cubeide='/home/us/.soft/st/stm32cubeide/stm32cubeide & exit'
 
 DATA_FILE=/home/us/todo
 # today task:
-alias tod='grep -n "^0:" $DATA_FILE | cut -d':' -f1,3,4'
+# alias tod='grep -n "^0" $DATA_FILE | cut -d':' -f1,3,4'
+alias tod='grep -n -e "^0:" -e "\[0\]" $DATA_FILE'
 # nextday task:
 alias tom='grep -n "^1:" $DATA_FILE | cut -d':' -f1,3,4'
 # later task:
 #alias lat='grep -n "^!:" $DATA_FILE | cut -d':' -f1,3,4'
 alias lat='grep -En "^!:|^[0-9][0-9]-[0-9][0-9]:|^2:" $DATA_FILE | cut -d':' -f1,2,3,4'
-alias now='grep -n "\[\*\]" $DATA_FILE'
+alias now='grep -n  -e "\[\*\]" -e "^\*" $DATA_FILE'
 
 # done task:
 # alias don='grep -n "^x:" $DATA_FILE | cut -d':' -f1,3,4'
@@ -50,7 +53,7 @@ alias press='/home/us/./press.sh & exit'
 alias shutdown='sudo /sbin/shutdown now'
 alias telegram='.soft/telegram/telegram & exit'
 alias mmp3='youtube-dl -x --audio-format mp3 $1'
-alias tor='/home/us/.soft/tor-browser_en-US/Browser/start-tor-browser & exit'
+alias tor='/home/us/.soft/tor-browser/Browser/start-tor-browser & exit'
 
 function del()
 {
@@ -64,7 +67,7 @@ function del()
 function don()
 {
 	if [ "$1" = "" ]; then
-		grep -n "^x:" $DATA_FILE | cut -d':' -f1,3,4
+		grep -n -e "^x:" -e "\[x\]" $DATA_FILE | cut -d':' -f1,2,3,4
 		return 1;
 	fi
 	sed -i "$1s/^0:/x:/" $DATA_FILE

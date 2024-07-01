@@ -376,7 +376,9 @@ git stash apply
 
 xrandr --output VGA1 --auto --right-of LVDS1
 
+# map escape to caps key:
 xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
+# opposite:
 xmodmap -e 'clear Lock' -e 'keycode 0x42 = Caps_Lock'
 
 setxkbmap -option caps:escape_shifted_capslock
@@ -418,3 +420,6 @@ ctags -R .
 # vim: terminal window from the right side:
 :vertical botright term
 
+# ls + sort by date:
+ls -lt
+ls -ltr

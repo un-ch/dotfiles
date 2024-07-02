@@ -74,6 +74,7 @@ PROGRAM_LIST="eog \
     cgdb \
     gdbserver \
     fonts-inconsolata \
+    ranger \
     tree
 	"
 apt-get install  $PROGRAM_LIST

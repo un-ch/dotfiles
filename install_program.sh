@@ -1,7 +1,7 @@
 #!/bin/bash
 
 PROGRAM_LIST="eog \
-	backlight \
+	xbacklight \
 	cppcheck \
 	cppcheck-gui \
 	git \
@@ -75,6 +75,10 @@ PROGRAM_LIST="eog \
     gdbserver \
     fonts-inconsolata \
     ranger \
-    tree
+    tree \
+    yt-dlp \
+    clamav \
+    tree \
+    mpv
 	"
 apt-get install  $PROGRAM_LIST

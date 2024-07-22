@@ -78,6 +78,7 @@ PROGRAM_LIST="eog \
     tree \
     yt-dlp \
     clamav \
+    tmux \
     tree \
     mpv
 	"

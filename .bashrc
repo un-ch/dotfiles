@@ -19,8 +19,11 @@ export EDITOR=vim
 # Shortcat for the pretty git log. Can be extended with the commit count parameter (last -10, last -35)
 alias last='git log --graph --all --oneline --decorate '
 
+alias prj='cd /home/us/prj/ ; pwd'
+alias pom='/home/us/./pomodoro_tool.sh'
 alias eclipse='/home/us/eclipse/cpp-2024-03/eclipse/eclipse & exit'
 alias ll='ls -l'
+alias ls='ls -F'
 alias la='ls -lAF'
 alias e='exit'
 alias fox='firefox & exit'
@@ -33,10 +36,24 @@ alias cubemx='/home/us/.soft/STM32CubeMX/STM32CubeMX & exit'
 alias cubeide_bak='/home/us/st/stm32cubeide_1.15.1/stm32cubeide & exit'
 alias cubeide='/home/us/.soft/st/stm32cubeide/stm32cubeide & exit'
 
+alias gits='git status'
+alias gitcom='git commit -s'
+alias gita='git add'
+alias gitc='git checkout'
+alias gitb='git branch'
+alias gitm='git checkout main'
+alias gitd='git diff'
+
+alias manage_windows='/home/us/./workspace_manage.sh &'
+alias ohne_js_firefox='/home/us/.soft/firefox_portable/firefox/firefox & exit'
+alias ctags_with_git_ls='git ls-files | ctags --links=no --languages=c,c++ -L-'
+
 DATA_FILE=/home/us/todo
 # today task:
 # alias tod='grep -n "^0" $DATA_FILE | cut -d':' -f1,3,4'
 alias tod='grep -n -e "^0:" -e "\[0\]" $DATA_FILE'
+alias too='/home/us/scripts/tod.sh'
+
 # nextday task:
 alias tom='grep -n "^1:" $DATA_FILE | cut -d':' -f1,3,4'
 # later task:
@@ -67,7 +84,7 @@ function del()
 function don()
 {
 	if [ "$1" = "" ]; then
-		grep -n -e "^x:" -e "\[x\]" $DATA_FILE | cut -d':' -f1,2,3,4
+		grep -n -e "^x:" -e "^\[x\]" $DATA_FILE | cut -d':' -f1,2,3,4
 		return 1;
 	fi
 	sed -i "$1s/^0:/x:/" $DATA_FILE
@@ -142,6 +159,7 @@ if [ "$color_prompt" = no ]; then
 else
     #PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
     PS1='${debian_chroot:+($debian_chroot)}> '
+    # PS1='${debian_chroot:+($debian_chroot)}\u@\h> '
 fi
 unset color_prompt force_color_prompt
 
@@ -165,6 +183,7 @@ if [ -x /usr/bin/dircolors ]; then
     #alias fgrep='fgrep --color=auto'
     #alias egrep='egrep --color=auto'
 fi
+
 
 # colored GCC warnings and errors
 # export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'

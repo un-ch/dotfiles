@@ -47,11 +47,11 @@ bindsym Control+2 exec setxkbmap ua
 bindsym Control+3 exec setxkbmap ru
 
 # volume control:
-bindsym Control+9 exec amixer -D pulse sset 'Master' 10%-
-bindsym Control+0 exec amixer -D pulse sset 'Master' 10%+
+bindsym Control+9 exec amixer -D pulse sset 'Master' 5%-
+bindsym Control+0 exec amixer -D pulse sset 'Master' 5%+
 
 # kill focused window
-bindsym $mod+Shift+q kill
+bindsym $mod+q kill
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec dmenu_run
@@ -225,3 +225,9 @@ client.focused_inactive #333333 #222222 #888888 #292d2e   #222222
 # client.unfocused        #333333 #222222 #888888 #292d2e   #222222
 # client.urgent           #2f343a #900000 #ffffff #900000   #900000
 # client.background       #ffffff
+
+# disable window borders:
+for_window [class="\w*"] border pixel 1
+
+# enable floating mode for all XTerm windows
+# for_window [class="XTerm"] floating enable

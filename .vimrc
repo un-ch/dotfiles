@@ -1,34 +1,42 @@
-call plug#begin('~/.vim/plugged')
+"Plug 'prabirshrestha/vim-lsp'
+"Plug 'francoiscabrol/ranger.vim'
+"Plug 'sickill/vim-monokai'
+
+call plug#begin()
+
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-"Plug 'sickill/vim-monokai'
 Plug 'tomtom/tcomment_vim'
-" Plug 'Yggdroot/indentLine'
 Plug 'morhetz/gruvbox'
-" Plug 'nathanaelkane/vim-indent-guides'
-"Plug 'prabirshrestha/vim-lsp'
+Plug 'majutsushi/tagbar'
+Plug 'nordtheme/vim'
 
 call plug#end()
 
 if 1
-	syntax off
-	hi SpecialKey ctermbg=black ctermfg=239
-else
 	syntax on
 	set termguicolors
-	colorscheme gruvbox
+    colorscheme nord
+    let g:nord_cursor_line_number_background = 1
+    let g:nord_uniform_status_lines = 1
+	" colorscheme gruvbox
+	" colorscheme monokai 
 	" let g:gruvbox_italic=1
 	" let g:gruvbox_italicize_comments=1
 	set bg=dark
-	let g:gruvbox_contrast_dark = 'light'
+	" let g:gruvbox_contrast_dark = 'medium'
+else
+	syntax off
+	hi SpecialKey ctermbg=black ctermfg=239
 endif
 
 set number relativenumber
 
 highlight VertSplit cterm=NONE
-set fillchars+=vert::
-" set list listchars=tab:⁞\ 
-"set list listchars=tab:..,trail:·,extends:»,precedes:«,space:. 
+"set fillchars+=vert:\|
+"set fillchars+=vert:-
+"set list listchars=tab:⁞\ 
+"set list listchars=tab:..,trail:·,extends:»,precedes:«,space:.
 
 let g:NERDTreeNodeDelimiter = "\u00a0"
 let NERDTreeShowHidden=1
@@ -38,19 +46,20 @@ let NERDTreeQuitOnOpen=1
 
 " toggle FZF plugin with <leader+f>:
 nnoremap <silent> <leader>f :FZF<CR>
-"nmap <C-P> :FZF<CR>
 
 " toggle Rg option (FZF) with <leader+r>:
 nnoremap <silent> <leader>r :Rg<CR>
-
-" toggle NERDTree with <ctrl+n>:
-" map <C-n> :NERDTreeToggle<CR>
 
 " toggle NERDTree with <\-key+n>:
 nnoremap <silent> <leader>n :NERDTreeToggle<CR>
 
 " toggle a terminal emulator window below a vim file, manage <\>+<t> hotkey:
 nmap <leader>t :bel ter<esc>
+" toggle a terminal emulator window on the right side, manage <\>+<t> hotkey:
+" nmap <leader>t :vert botr term<esc>
+
+" toggle a tmux window, manage <\>+<m> hotkey:
+nmap <leader>m :!tmux<esc>
 
 " scrolling buffers with <tab> (<shift>+<tab):
 nnoremap  <silent>   <tab>  :if &modifiable && !&readonly 
@@ -59,8 +68,7 @@ nnoremap  <silent> <s-tab>  :if &modifiable && !&readonly
 	\&& &modified <CR> :write<CR> :endif<CR>:bprevious<CR>
 
 "automatic closing brackets:
-" inoremap {<CR>  {<CR>}<Esc>O
-" inoremap {<CR> {<CR>}<C-o>0
+inoremap {<CR>  {<CR>}<Esc>O
 
 " constant showing the file name: 
 set laststatus=2
@@ -84,13 +92,11 @@ set statusline+=%*
 set statusline+=%=%l:%c\ 
 
 " turn off vim autoindentation:
-set paste 
+"set paste 
 
 set noshowcmd
 set hidden "move to another buffer without saving the current file 
-set noincsearch
-set smartcase
-set ignorecase
+"set noincsearch
 set nowrapscan
 set foldmethod=manual
 set foldnestmax=10
@@ -100,13 +106,21 @@ set foldlevel=2
 " Case insensitive search if all lowercase
 set ignorecase smartcase
 
-set incsearch hlsearch showmatch
+set incsearch
 
-" set autoindent
-" set smartindent
+" disable the highlighting completely:
+set nohlsearch
+
+set showmatch
+
+set autoindent
+set smartindent
 
 "controling the number of 'space' characters while tab key pressed:
 set tabstop=4
+set smarttab
+
+set tw=0 wm=0
 
 "indentation several lines at once:
 set shiftwidth=4
@@ -128,10 +142,14 @@ hi NonText NONE
 hi Question NONE
 
 "set (as well) style of brackets while autocompletes:
-hi MatchParen cterm=none ctermbg=none ctermfg=gray
+hi MatchParen cterm=none ctermbg=none ctermfg=grey
+
+"hi MatchParen cterm=none ctermbg=none ctermfg=darkgray
+"hi MatchParen cterm=none ctermbg=darkgrey ctermfg=black
+"hi MatchParen cterm=none ctermbg=darkgray ctermfg=505050
 
 " bash-like TAB completion
-" set wildmode=longest,list
+set wildmode=longest,list
 
 " Navigate through completion variants using ← and →
 set wildmenu
@@ -144,10 +162,9 @@ hi SignColumn guifg=white
 hi Visual ctermbg=darkgrey ctermfg=black
 
 " remap caps lock -> escape keys:
-" au VimEnter * silent! !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
-
-"  au VimLeave * silent! !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Caps_Lock'
-"  au BufEnter * silent! !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
+au VimEnter * silent! !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
+" au VimLeave * silent! !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Caps_Lock'
+" au BufEnter * silent! !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
 " au BufLeave * silent! !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Caps_Lock'
 " xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
 " xmodmap -e 'clear Lock' -e 'keycode 0x42 = Caps_Lock'
@@ -166,4 +183,10 @@ nmap <C-P> :FZF<CR>
 
 " The 'scrolloff' (scroll offset) option determines the minimum number of screen
 " lines that you would like above and below the cursor:
-:set scrolloff=5
+set scrolloff=5
+
+" let g:NERDTreeHijackNetrw=0 "add this line if you use NERDTree
+" let g:ranger_replace_netrw=1 "open ranger when vim open a directory
+
+" Enable Omnicomplete features
+" set omnifunc=ccomplete#Complete

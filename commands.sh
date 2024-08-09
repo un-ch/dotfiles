@@ -423,3 +423,24 @@ ctags -R .
 # ls + sort by date:
 ls -lt
 ls -ltr
+
+# ctags option (tests needed):
+??? git ls-files | ctags --links=no --languages=c,c++ -L-
+
+# ctags option:
+ctags -R --languages=C .
+
+git log --stat
+
+grep -n -B 3 20min todo_bak | grep -e '2*\:0' -e '2*###'
+
+notify-send 'Hello world\!' 'This is an example notification.' --icon=dialog-information
+
+# set second monitor vertical position:
+xrandr --output VGA1 --rotate left --left-of LVDS1
+
+free -h
+
+ssh us@IP_ADDR
+
+rsync -av spfs/ us@192.168.122.163:/home/us/

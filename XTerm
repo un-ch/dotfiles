@@ -1,12 +1,13 @@
-xterm*faceSize: 13
+xterm*faceSize: 15
 
-!xterm*faceName: Notosansmono
-!xterm*faceName: Luxi Mono
-!xterm*faceName: Freemonooboldoblique
-!xterm*faceName: Monospace
+xterm*faceName: Inconsolata
+
+!nice fonts:
 !xterm*faceName: Liberationmono
 !xterm*faceName: DejaVuSansMono
-xterm*faceName: NotoMono
+!xterm*faceName: Hack
+
+!xterm*faceName: NotoMono
 
 XTerm*vt100.translations: #override \
     Shift Ctrl <Key> C: copy-selection(CLIPBOARD) \n\
@@ -15,12 +16,16 @@ XTerm*vt100.translations: #override \
 xterm*background: black
 
 xterm*allowBoldFonts: false
+!xterm*allowBoldFonts: true
 
-!dark-dark-grey font color:
+!darkest-grey font color:
 !xterm*foreground: rgb:40/40/40
 
+!dark-dark grey font color:
+xterm*foreground: #505050
+
 !dark-grey font color:
-xterm*foreground: rgb:66/66/66
+!xterm*foreground: rgb:66/66/66
 
 !xterm*colorMode: false
 xterm*colorMode: true

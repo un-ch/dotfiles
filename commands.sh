@@ -441,6 +441,8 @@ xrandr --output VGA1 --rotate left --left-of LVDS1
 
 free -h
 
-ssh us@IP_ADDR
+ssh US_NAME@IP_ADDR
 
 rsync -av spfs/ us@192.168.122.163:/home/us/
+
+objdump -DCM intell a.out | less

@@ -80,6 +80,9 @@ PROGRAM_LIST="eog \
     clamav \
     tmux \
     tree \
+    rsync \
+    virt-manager \
+    qemu-system-x86 \
     mpv
 	"
 apt-get install  $PROGRAM_LIST

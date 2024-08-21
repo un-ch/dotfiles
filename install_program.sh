@@ -42,7 +42,6 @@ PROGRAM_LIST="eog \
 	plantuml \
 	doxygen \
 	graphviz \
-	unrar \
 	qtcreator \
 	qtbase5-dev \
 	qttools5-dev \
@@ -79,10 +78,19 @@ PROGRAM_LIST="eog \
     yt-dlp \
     clamav \
     tmux \
+    arduino \
     tree \
     rsync \
     virt-manager \
     qemu-system-x86 \
-    mpv
+    gparted \
+    gcc-arm-linux-gnueabihf \
+    mpv \
+    netsurf-common \
+    build-essential \
+    flex \
+    bison \
+    u-boot-tools \
+    lzop
 	"
 apt-get install  $PROGRAM_LIST

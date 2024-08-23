@@ -91,6 +91,7 @@ PROGRAM_LIST="eog \
     flex \
     bison \
     u-boot-tools \
+    hdparm \
     lzop
 	"
 apt-get install  $PROGRAM_LIST

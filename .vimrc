@@ -13,18 +13,18 @@ Plug 'nordtheme/vim'
 
 call plug#end()
 
-if 1
+if 0
 	syntax on
 	set termguicolors
     colorscheme nord
-    let g:nord_cursor_line_number_background = 1
-    let g:nord_uniform_status_lines = 1
-	" colorscheme gruvbox
+    " let g:nord_cursor_line_number_background = 1
+    " let g:nord_uniform_status_lines = 1
+	colorscheme gruvbox
 	" colorscheme monokai 
 	" let g:gruvbox_italic=1
 	" let g:gruvbox_italicize_comments=1
 	set bg=dark
-	" let g:gruvbox_contrast_dark = 'medium'
+	let g:gruvbox_contrast_dark = 'medium'
 else
 	syntax off
 	hi SpecialKey ctermbg=black ctermfg=239
@@ -96,7 +96,7 @@ set statusline+=%=%l:%c\
 
 set noshowcmd
 set hidden "move to another buffer without saving the current file 
-"set noincsearch
+set noincsearch
 set nowrapscan
 set foldmethod=manual
 set foldnestmax=10
@@ -110,6 +110,7 @@ set incsearch
 
 " disable the highlighting completely:
 set nohlsearch
+"set hlsearch
 
 set showmatch
 
@@ -133,8 +134,9 @@ hi ErrorMsg NONE
 hi LineNr NONE
 hi CursorLineNr NONE
 hi Folded NONE
-hi Search NONE
 hi NonText NONE
+hi Search NONE
+"hi Search cterm=none ctermbg=grey ctermfg=black
 
 " hi MoreMsg NONE
 

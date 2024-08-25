@@ -92,6 +92,7 @@ PROGRAM_LIST="eog \
     bison \
     u-boot-tools \
     hdparm \
+    emacs \
     lzop
 	"
 apt-get install  $PROGRAM_LIST

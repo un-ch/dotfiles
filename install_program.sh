@@ -93,6 +93,7 @@ PROGRAM_LIST="eog \
     u-boot-tools \
     hdparm \
     emacs \
+    ffmpeg \
     lzop
 	"
 apt-get install  $PROGRAM_LIST

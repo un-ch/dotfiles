@@ -12,22 +12,37 @@ export TERM=xterm-256color
 #export TERM=xterm-mono
 export EDITOR=vim
 
-
 # Show a current active git branch in the shell prompt
 # export PS1='\t \[\033[01;32m\]\u\[\033[01;34m\] \w\[\033[01;33m\]$(__git_ps1)\[\033[01;34m\] \$\[\033[00m\] '
 
 # Shortcat for the pretty git log. Can be extended with the commit count parameter (last -10, last -35)
 alias last='git log --graph --all --oneline --decorate '
 
+alias pp='mpv --ytdl-format="bestvideo[height<=?1080][fps<=?60][vcodec!=?vp9][vcodec!=?av1]+bestaudio/best" $1'
+alias emu='/usr/bin/qemu-system-x86_64'
+alias lofi_radio='/home/us/scripts/lofi_radio.sh &'
+alias puml='plantuml -DPLANTUML_LIMIT_SIZE=8192 $1'
+
 alias prj='cd /home/us/prj/ ; pwd'
-alias pom='/home/us/./pomodoro_tool.sh'
+alias foowm='cd /home/us/prj/foowm/ ; pwd'
+alias another_snake_game='cd /home/us/prj/another_snake_game/ ; pwd'
+alias quest_game='cd /home/us/prj/quest_game/ ; pwd'
+alias mcu1='cd /home/us/downloads/udemy_courses/mcu1_mastering_mc_and_embed_driver_develop_discov_vers ; pwd'
+alias motyga='cd /home/us/prj/motyga/src ; pwd'
+alias tetris='cd /home/us/prj/tetris/src ; pwd'
+alias anki='cd /home/us/.soft/anki-25.02.6-linux-qt6/ ; pwd'
+alias resume='cd /home/us/prj/resume_latex ; pwd'
+
+alias pomodoro='/home/us/./pomodoro_tool.sh &'
 alias eclipse='/home/us/eclipse/cpp-2024-03/eclipse/eclipse & exit'
-alias ll='ls -l'
-alias ls='ls -F'
+#alias ll='ls -l'
+alias ll='ls -lFh --group-directories-first --color=auto'
+#alias ls='ls -F --group-directories-first'
 alias la='ls -lAF'
 alias e='exit'
 alias fox='firefox & exit'
 alias foxp='firefox --private-window & exit'
+alias wfox='/home/us/.soft/waterfox/waterfox & exit'
 alias pal='/home/us/.soft/palemoon_gtk2/palemoon & exit'
 alias chrom='chromium & exit'
 alias mplayer_faster='mplayer -fs -af scaletempo -speed 1.5'
@@ -36,13 +51,10 @@ alias cubemx='/home/us/.soft/STM32CubeMX/STM32CubeMX & exit'
 alias cubeide_bak='/home/us/st/stm32cubeide_1.15.1/stm32cubeide & exit'
 alias cubeide='/home/us/.soft/st/stm32cubeide/stm32cubeide & exit'
 
-alias gits='git status'
-alias gitcom='git commit -s'
-alias gita='git add'
-alias gitc='git checkout'
-alias gitb='git branch'
-alias gitm='git checkout main'
-alias gitd='git diff'
+alias gitstatus='git status'
+alias gitcommit='git commit -s'
+alias gitdiff='git diff'
+alias gitbranch='git branch -a'
 
 alias manage_windows='/home/us/./workspace_manage.sh &'
 alias ohne_js_firefox='/home/us/.soft/firefox_portable/firefox/firefox & exit'
@@ -51,7 +63,7 @@ alias ctags_with_git_ls='git ls-files | ctags --links=no --languages=c,c++ -L-'
 DATA_FILE=/home/us/todo
 # today task:
 # alias tod='grep -n "^0" $DATA_FILE | cut -d':' -f1,3,4'
-alias tod='grep -n -e "^0:" -e "\[0\]" $DATA_FILE'
+alias tod='grep -n -e "^0:" -e "\[0\]" $DATA_FILE | cut -d':' -f1,3,4'
 alias too='/home/us/scripts/tod.sh'
 
 # nextday task:
@@ -158,7 +170,11 @@ if [ "$color_prompt" = no ]; then
     PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 else
     #PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
-    PS1='${debian_chroot:+($debian_chroot)}> '
+    #PS1='${debian_chroot:+($debian_chroot)}> '
+    #PS1='${debian_chroot:+($debian_chroot)}[\W]# '
+
+    PS1='${debian_chroot:+($debian_chroot)}(\W): '
+    
     # PS1='${debian_chroot:+($debian_chroot)}\u@\h> '
 fi
 unset color_prompt force_color_prompt

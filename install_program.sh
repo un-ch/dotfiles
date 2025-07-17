@@ -42,6 +42,7 @@ PROGRAM_LIST="eog \
 	plantuml \
 	doxygen \
 	graphviz \
+	unrar \
 	qtcreator \
 	qtbase5-dev \
 	qttools5-dev \
@@ -87,13 +88,8 @@ PROGRAM_LIST="eog \
     gcc-arm-linux-gnueabihf \
     mpv \
     netsurf-common \
-    build-essential \
-    flex \
-    bison \
-    u-boot-tools \
-    hdparm \
-    emacs \
-    ffmpeg \
-    lzop
+    cfdisk \
+    fdisk \
+    smtube
 	"
 apt-get install  $PROGRAM_LIST

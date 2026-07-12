@@ -1,15 +1,13 @@
-xterm*faceSize: 11
-xterm*faceName: Inconsolata
-!xterm*faceName: FantasqueSansMono
+xterm*faceSize: 10
+!xterm*faceName: Inconsolata
+xterm*faceName: Comic Mono
 
 !!!!!!!pretty nice fonts:
 !xterm*faceName: Inconsolata
 !xterm*faceName: FantasqueSansMono
-!xterm*faceName: Terminus
 !xterm*faceName: NotoMono
 !xterm*faceName: Liberationmono
 !xterm*faceName: DejaVuSansMono
-!xterm*faceName: Hack
 
 XTerm*vt100.translations: #override \
     Shift Ctrl <Key> C: copy-selection(CLIPBOARD) \n\
@@ -18,18 +16,17 @@ XTerm*vt100.translations: #override \
 xterm*background: black
 
 xterm*allowBoldFonts: false
-!xterm*allowBoldFonts: true
 
 !darkest-grey font color:
-xterm*foreground: rgb:40/40/40
+!xterm*foreground: rgb:40/40/40
 
 !dark-dark grey font color:
 !xterm*foreground: #505050
 
 !dark-grey font color:
 !xterm*foreground: rgb:66/66/66
+xterm*foreground: #666666
 
-!xterm*colorMode: false
 xterm*colorMode: true
 
 xterm*cursorBlock: true

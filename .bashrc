@@ -16,40 +16,39 @@ export EDITOR=vim
 # export PS1='\t \[\033[01;32m\]\u\[\033[01;34m\] \w\[\033[01;33m\]$(__git_ps1)\[\033[01;34m\] \$\[\033[00m\] '
 
 # Shortcat for the pretty git log. Can be extended with the commit count parameter (last -10, last -35)
-alias last='git log --graph --all --oneline --decorate '
+alias last='git log --graph --all --oneline --decorate'
 
-alias pp='mpv --ytdl-format="bestvideo[height<=?1080][fps<=?60][vcodec!=?vp9][vcodec!=?av1]+bestaudio/best" $1'
+alias pp='mpv $1'
+alias ytdlp='/home/us/.soft/yt-dlt/yt-dlp $1'
 alias emu='/usr/bin/qemu-system-x86_64'
 alias lofi_radio='/home/us/scripts/lofi_radio.sh &'
 alias puml='plantuml -DPLANTUML_LIMIT_SIZE=8192 $1'
 
 alias prj='cd /home/us/prj/ ; pwd'
-alias foowm='cd /home/us/prj/foowm/ ; pwd'
-alias another_snake_game='cd /home/us/prj/another_snake_game/ ; pwd'
-alias quest_game='cd /home/us/prj/quest_game/ ; pwd'
-alias mcu1='cd /home/us/downloads/udemy_courses/mcu1_mastering_mc_and_embed_driver_develop_discov_vers ; pwd'
-alias motyga='cd /home/us/prj/motyga/src ; pwd'
+alias snake_again='cd /home/us/prj/snake_again/src ; pwd'
 alias tetris='cd /home/us/prj/tetris/src ; pwd'
-alias anki='cd /home/us/.soft/anki-25.02.6-linux-qt6/ ; pwd'
 alias resume='cd /home/us/prj/resume_latex ; pwd'
+alias stol='cd /home/us/documents/stol_content ; pwd'
+alias stuff='cd /home/us/documents/stuff ; pwd'
 
-alias pomodoro='/home/us/./pomodoro_tool.sh &'
-alias eclipse='/home/us/eclipse/cpp-2024-03/eclipse/eclipse & exit'
-#alias ll='ls -l'
+alias xc='xclip -selection clipboard'
+
 alias ll='ls -lFh --group-directories-first --color=auto'
 #alias ls='ls -F --group-directories-first'
 alias la='ls -lAF'
+alias l='ls -aF --group-directories-first'
 alias e='exit'
+
 alias fox='firefox & exit'
 alias foxp='firefox --private-window & exit'
+
+alias fx='/home/us/.soft/firefox/firefox & exit'
+alias fxp='/home/us/.soft/firefox/firefox --private-window & exit'
+
 alias wfox='/home/us/.soft/waterfox/waterfox & exit'
-alias pal='/home/us/.soft/palemoon_gtk2/palemoon & exit'
 alias chrom='chromium & exit'
+
 alias mplayer_faster='mplayer -fs -af scaletempo -speed 1.5'
-alias minder='/usr/bin/com.github.phase1geo.minder & exit'
-alias cubemx='/home/us/.soft/STM32CubeMX/STM32CubeMX & exit'
-alias cubeide_bak='/home/us/st/stm32cubeide_1.15.1/stm32cubeide & exit'
-alias cubeide='/home/us/.soft/st/stm32cubeide/stm32cubeide & exit'
 
 alias gitstatus='git status'
 alias gitcommit='git commit -s'
@@ -65,7 +64,6 @@ DATA_FILE=/home/us/todo
 # alias tod='grep -n "^0" $DATA_FILE | cut -d':' -f1,3,4'
 alias tod='grep -n -e "^0:" -e "\[0\]" $DATA_FILE | cut -d':' -f1,3,4'
 alias too='/home/us/scripts/tod.sh'
-
 # nextday task:
 alias tom='grep -n "^1:" $DATA_FILE | cut -d':' -f1,3,4'
 # later task:
@@ -78,11 +76,17 @@ alias now='grep -n  -e "\[\*\]" -e "^\*" $DATA_FILE'
 # dated task:
 alias dat='grep -n "^[0-9][0-9]-[0-9][0-9]:" $DATA_FILE'
 
-alias press='/home/us/./press.sh & exit'
-alias shutdown='sudo /sbin/shutdown now'
-alias telegram='.soft/telegram/telegram & exit'
+# Next action tasks:
+# alias nxt='grep -n "\[>\]" $DATA_FILE'
+alias nxt=$'grep -n -e "^>" -e "^\t>" "$DATA_FILE"'
+
 alias mmp3='youtube-dl -x --audio-format mp3 $1'
 alias tor='/home/us/.soft/tor-browser/Browser/start-tor-browser & exit'
+
+function pomodoro()
+{
+	/home/us/prj/pomodoro_tool/pomodoro_tool.sh $1 &
+}
 
 function del()
 {
@@ -115,8 +119,6 @@ function xt()
 
 	/usr/bin/i3-msg workspace $1 1>/dev/null ; xterm -e "cd $CURRENT_DIR; $SHELL" &
 }
-
-
 
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
@@ -169,13 +171,9 @@ fi
 if [ "$color_prompt" = no ]; then
     PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 else
-    #PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
-    #PS1='${debian_chroot:+($debian_chroot)}> '
-    #PS1='${debian_chroot:+($debian_chroot)}[\W]# '
-
-    PS1='${debian_chroot:+($debian_chroot)}(\W): '
-    
-    # PS1='${debian_chroot:+($debian_chroot)}\u@\h> '
+    #PS1='${debian_chroot:+($debian_chroot)}(\W): '
+    #PS1='\[\e[34m\]\W\[\e[0m\] ❯ '
+    PS1='(\[\e[34m\]\W\[\e[0m\])# '
 fi
 unset color_prompt force_color_prompt
 

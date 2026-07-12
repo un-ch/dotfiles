@@ -1,95 +1,95 @@
 #!/bin/bash
 
 PROGRAM_LIST="eog \
-	xbacklight \
-	cppcheck \
-	cppcheck-gui \
-	git \
-	gdb \
-	vim \
-	gcc \
-	g++ \
-	clang \
-	nasm \
-	ssh \
-	redshift \
-	geoclue-2.0 \
-	libncurses5-dev \
-	libncursesw5-dev \
-	qbittorrent \
-	texlive-base \
-	texlive-latex-base\
-	texlive-latex-extra \
-	universal-ctags \
-	mplayer \
-	vlc \
-	atril \
-	evince \
-	gimp \
-	firefox-esr \
-	doxygen \
-	make \
-	cmake \
-	i3 \
-	i3status \
-	youtube-dl \
-	bpftrace \
-	strace \
-	valgrind \
-	atop \
-	htop \
-    btop \
-	plantuml \
-	doxygen \
-	graphviz \
-	unrar \
-	qtcreator \
-	qtbase5-dev \
-	qttools5-dev \
-	xorg-dev \
-	xbacklight \
-	libssl-dev \
-	libx11-dev \
-	libsodium-dev \
-	libgl1-mesa-glx \
-	libegl1-mesa \
-	libcurl4-openssl-dev \
-	libavahi-compat-libdnssd-dev \
-	qtdeclarative5-dev \
-	libqt5svg5-dev \
-	libnotify-dev \
-	libgdk-pixbuf2.0-dev \
-	libglib2.0-dev \
-	keepass2 \
-	ncal \
-	ripgrep \
-	gsmartcontrol \
-    openocd \
-    gcc-arm-none-eabi \
-    stlink-tools \
-    stm32flash \
-    ntpdate \
-    gdb-multiarch \
-    ddd \
-    cgdb \
-    gdbserver \
-    fonts-inconsolata \
-    ranger \
-    tree \
-    yt-dlp \
-    clamav \
-    tmux \
-    arduino \
-    tree \
-    rsync \
-    virt-manager \
-    qemu-system-x86 \
-    gparted \
-    gcc-arm-linux-gnueabihf \
-    mpv \
-    netsurf-common \
-    cfdisk \
-    fdisk \
-    smtube
-	"
+xbacklight \
+cppcheck \
+cppcheck-gui \
+git \
+gdb \
+vim \
+gcc \
+g++ \
+clang \
+nasm \
+ssh \
+redshift \
+geoclue-2.0 \
+libncurses5-dev \
+libncursesw5-dev \
+qbittorrent \
+texlive-base \
+texlive-latex-base\
+texlive-latex-extra \
+universal-ctags \
+mplayer \
+vlc \
+atril \
+evince \
+gimp \
+firefox-esr \
+doxygen \
+make \
+cmake \
+i3 \
+i3status \
+youtube-dl \
+bpftrace \
+strace \
+valgrind \
+atop \
+htop \
+btop \
+plantuml \
+doxygen \
+graphviz \
+unrar \
+qtcreator \
+qtbase5-dev \
+qttools5-dev \
+xorg-dev \
+xbacklight \
+libssl-dev \
+libx11-dev \
+libsodium-dev \
+libgl1-mesa-glx \
+libegl1-mesa \
+libcurl4-openssl-dev \
+libavahi-compat-libdnssd-dev \
+qtdeclarative5-dev \
+libqt5svg5-dev \
+libnotify-dev \
+libgdk-pixbuf2.0-dev \
+libglib2.0-dev \
+keepass2 \
+ncal \
+ripgrep \
+gsmartcontrol \
+openocd \
+gcc-arm-none-eabi \
+stlink-tools \
+stm32flash \
+ntpdate \
+gdb-multiarch \
+ddd \
+cgdb \
+gdbserver \
+fonts-inconsolata \
+ranger \
+tree \
+yt-dlp \
+clamav \
+tmux \
+arduino \
+tree \
+rsync \
+virt-manager \
+qemu-system-x86 \
+gparted \
+gcc-arm-linux-gnueabihf \
+mpv \
+netsurf-common \
+cfdisk \
+fdisk \
+smtube
+"
 apt-get install  $PROGRAM_LIST

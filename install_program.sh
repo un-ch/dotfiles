@@ -42,7 +42,6 @@ btop \
 plantuml \
 doxygen \
 graphviz \
-unrar \
 qtcreator \
 qtbase5-dev \
 qttools5-dev \
@@ -61,6 +60,7 @@ libnotify-dev \
 libgdk-pixbuf2.0-dev \
 libglib2.0-dev \
 keepass2 \
+keepassxc \
 ncal \
 ripgrep \
 gsmartcontrol \
@@ -74,6 +74,7 @@ ddd \
 cgdb \
 gdbserver \
 fonts-inconsolata \
+fonts-fantasque-sans \
 ranger \
 tree \
 yt-dlp \
@@ -88,8 +89,16 @@ gparted \
 gcc-arm-linux-gnueabihf \
 mpv \
 netsurf-common \
-cfdisk \
 fdisk \
-smtube
+smtube \
+minitube \
+locate \
+psmisc \
+pavucontrol \
+unar \
+rg \
+fzf \
+wireshark \
+curl
 "
-apt-get install  $PROGRAM_LIST
+apt-get install $PROGRAM_LIST
